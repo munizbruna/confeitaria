@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delícias da Cozinha - Suas Receitas Favoritas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Cabeçalho -->
+    <header class="bg-white shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-amber-600">
+                <a href="#">Delícias da Cozinha</a>
+            </div>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#populares" class="text-gray-600 hover:text-amber-600">Populares</a>
+                <a href="#categorias" class="text-gray-600 hover:text-amber-600">Categorias</a>
+                <a href="#" class="bg-amber-500 text-white px-4 py-2 rounded-full hover:bg-amber-600 transition-colors">Enviar Receita</a>
+            </div>
+            <div class="md:hidden">
+                <button class="text-gray-600 hover:text-amber-600">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Seção 1: Apresentação e Dropdown -->
+        <section class="text-center py-16">
+            <h1 class="text-5xl md:text-6xl font-bold text-amber-700 mb-4">O Sabor Encontra a Tradição</h1>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+                Bem-vindo ao Delícias da Cozinha! Aqui, compartilhamos receitas incríveis para todos os momentos. Explore nossos pratos, descubra novos sabores e inspire-se para cozinhar.
+            </p>
+            <div class="relative inline-block max-w-sm w-full">
+                <select class="w-full appearance-none bg-white border border-gray-300 text-gray-700 py-3 px-4 pr-8 rounded-full leading-tight focus:outline-none focus:bg-white focus:border-amber-500 focus:ring-2 focus:ring-amber-200 transition">
+                    <option>Navegue por todas as receitas...</option>
+                    <option>Bolo de Chocolate Fofinho</option>
+                    <option>Lasanha à Bolonhesa Clássica</option>
+                    <option>Frango Assado com Ervas</option>
+                    <option>Salada Caesar com Molho Caseiro</option>
+                    <option>Mousse de Maracujá Cremoso</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-700">
+                    <i data-lucide="chevron-down" class="h-5 w-5"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 2: Receitas Mais Acessadas -->
+        <section id="populares" class="py-16">
+            <h2 class="text-4xl font-bold text-center mb-12">Receitas Populares</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card de Receita 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                    <img src="https://placehold.co/600x400/f97316/ffffff?text=Bolo" alt="Imagem de um bolo de cenoura" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Bolo de Cenoura</h3>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i data-lucide="cake-slice" class="w-4 h-4 mr-2 text-amber-500"></i>
+                            <span>Sobremesas</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card de Receita 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                    <img src="https://placehold.co/600x400/ef4444/ffffff?text=Massa" alt="Imagem de uma lasanha" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Lasanha à Bolonhesa</h3>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i data-lucide="pizza" class="w-4 h-4 mr-2 text-amber-500"></i>
+                            <span>Massas</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card de Receita 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                    <img src="https://placehold.co/600x400/22c55e/ffffff?text=Salada" alt="Imagem de uma salada" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Salada Fresca de Verão</h3>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i data-lucide="leaf" class="w-4 h-4 mr-2 text-amber-500"></i>
+                            <span>Saladas</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card de Receita 4 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                    <img src="https://placehold.co/600x400/3b82f6/ffffff?text=Sopa" alt="Imagem de uma sopa" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Sopa de Abóbora</h3>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i data-lucide="soup" class="w-4 h-4 mr-2 text-amber-500"></i>
+                            <span>Sopas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 3: Todas as Categorias -->
+        <section id="categorias" class="py-16 bg-amber-50 rounded-2xl">
+            <h2 class="text-4xl font-bold text-center mb-12">Explore por Categoria</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <!-- Card de Categoria -->
+                <a href="receita.html" class="block bg-white p-6 rounded-xl text-center shadow-md hover:shadow-xl hover:bg-amber-100 transition-all duration-300">
+                    <i data-lucide="cake-slice" class="w-12 h-12 mx-auto text-amber-600 mb-4"></i>
+                    <h3 class="font-semibold text-lg">Sobremesas</h3>
+                </a>
+                <!-- Card de Categoria -->
+                <a href="#" class="block bg-white p-6 rounded-xl text-center shadow-md hover:shadow-xl hover:bg-amber-100 transition-all duration-300">
+                    <i data-lucide="pizza" class="w-12 h-12 mx-auto text-amber-600 mb-4"></i>
+                    <h3 class="font-semibold text-lg">Massas</h3>
+                </a>
+                <!-- Card de Categoria -->
+                <a href="#" class="block bg-white p-6 rounded-xl text-center shadow-md hover:shadow-xl hover:bg-amber-100 transition-all duration-300">
+                    <i data-lucide="leaf" class="w-12 h-12 mx-auto text-amber-600 mb-4"></i>
+                    <h3 class="font-semibold text-lg">Saladas</h3>
+                </a>
+                <!-- Card de Categoria -->
+                <a href="#" class="block bg-white p-6 rounded-xl text-center shadow-md hover:shadow-xl hover:bg-amber-100 transition-all duration-300">
+                    <i data-lucide="soup" class="w-12 h-12 mx-auto text-amber-600 mb-4"></i>
+                    <h3 class="font-semibold text-lg">Sopas</h3>
+                </a>
+                <!-- Card de Categoria -->
+                <a href="#" class="block bg-white p-6 rounded-xl text-center shadow-md hover:shadow-xl hover:bg-amber-100 transition-all duration-300">
+                    <i data-lucide="beef" class="w-12 h-12 mx-auto text-amber-600 mb-4"></i>
+                    <h3 class="font-semibold text-lg">Carnes</h3>
+                </a>
+                <!-- Card de Categoria -->
+                <a href="#" class="block bg-white p-6 rounded-xl text-center shadow-md hover:shadow-xl hover:bg-amber-100 transition-all duration-300">
+                    <i data-lucide="fish" class="w-12 h-12 mx-auto text-amber-600 mb-4"></i>
+                    <h3 class="font-semibold text-lg">Frutos do Mar</h3>
+                </a>
+                 <!-- Card de Categoria -->
+                <a href="#" class="block bg-white p-6 rounded-xl text-center shadow-md hover:shadow-xl hover:bg-amber-100 transition-all duration-300">
+                    <i data-lucide="carrot" class="w-12 h-12 mx-auto text-amber-600 mb-4"></i>
+                    <h3 class="font-semibold text-lg">Vegetarianas</h3>
+                </a>
+                 <!-- Card de Categoria -->
+                <a href="#" class="block bg-white p-6 rounded-xl text-center shadow-md hover:shadow-xl hover:bg-amber-100 transition-all duration-300">
+                    <i data-lucide="martini" class="w-12 h-12 mx-auto text-amber-600 mb-4"></i>
+                    <h3 class="font-semibold text-lg">Bebidas</h3>
+                </a>
+                 <!-- Card de Categoria -->
+                <a href="#" class="block bg-white p-6 rounded-xl text-center shadow-md hover:shadow-xl hover:bg-amber-100 transition-all duration-300">
+                    <i data-lucide="croissant" class="w-12 h-12 mx-auto text-amber-600 mb-4"></i>
+                    <h3 class="font-semibold text-lg">Lanches</h3>
+                </a>
+                 <!-- Card de Categoria -->
+                <a href="#" class="block bg-white p-6 rounded-xl text-center shadow-md hover:shadow-xl hover:bg-amber-100 transition-all duration-300">
+                    <i data-lucide="cookie" class="w-12 h-12 mx-auto text-amber-600 mb-4"></i>
+                    <h3 class="font-semibold text-lg">Biscoitos</h3>
+                </a>
+                 <!-- Card de Categoria -->
+                <a href="#" class="block bg-white p-6 rounded-xl text-center shadow-md hover:shadow-xl hover:bg-amber-100 transition-all duration-300">
+                    <i data-lucide="ice-cream-2" class="w-12 h-12 mx-auto text-amber-600 mb-4"></i>
+                    <h3 class="font-semibold text-lg">Sorvetes</h3>
+                </a>
+                 <!-- Card de Categoria -->
+                <a href="#" class="block bg-white p-6 rounded-xl text-center shadow-md hover:shadow-xl hover:bg-amber-100 transition-all duration-300">
+                    <i data-lucide="bread" class="w-12 h-12 mx-auto text-amber-600 mb-4"></i>
+                    <h3 class="font-semibold text-lg">Pães</h3>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-800 text-white mt-16">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; 2024 Delícias da Cozinha. Todos os direitos reservados.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="#" class="hover:text-amber-400">Facebook</a>
+                <a href="#" class="hover:text-amber-400">Instagram</a>
+                <a href="#" class="hover:text-amber-400">Pinterest</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

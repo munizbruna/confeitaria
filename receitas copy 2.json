@@ -1,0 +1,714 @@
+{
+    "pudim_de_leite": {
+        "name": "Pudim de leite",
+        "category": "Pudins e Flans",
+        "icon": "fa-solid fa-utensils",
+        "description": "",
+        "ingredients": [{"name": "Leite condensado", "percentage": "46,9"}, {"name": "Leite líquido", "percentage": "35,2"}, {"name": "Ovos", "percentage": "17,8"}],
+        "method": ["Bater todos os ingredientes no liquidificador.", "Colocar em fôrma untada e caramelizada.", "Assar em banho-maria."]
+    },
+    "pudim_de_coco": {
+        "name": "Pudim de coco",
+        "category": "Pudins e Flans",
+        "icon": "fa-solid fa-utensils",
+        "description": "Para haver uma separação entre o pudim e o coco, após verter na forma deixar descansar aproximadamente 10 minutos antes de levar ao forno.",
+        "ingredients": [{"name": "Leite condensado", "percentage": "36,6"}, {"name": "Leite líquido", "percentage": "22,0"}, {"name": "Leite de coco", "percentage": "23,1"}, {"name": "Ovos", "percentage": "12,8"}, {"name": "Coco seco ralado", "percentage": "5,5"}],
+        "method": ["Bater todos os ingredientes no liquidificador.", "Colocar em fôrma untada e caramelizada.", "Assar em banho-maria."]
+    },
+    "pudim_de_pão": {
+        "name": "Pudim de pão",
+        "category": "Pudins e Flans",
+        "icon": "fa-solid fa-utensils",
+        "description": "Podem-se acrescentar ameixas secas picadas, frutas cristalizadas, uva passa. Pode-se acrescentar canela em pó em até 0,3%.",
+        "ingredients": [{"name": "Leite líquido", "percentage": "44,6"}, {"name": "Pão", "percentage": "13,4"}, {"name": "Açúcar", "percentage": "24,1"}, {"name": "Ovos", "percentage": "17,9"}],
+        "method": ["Bater no liquidificador o açúcar e os ovos.", "Picar o pão e umedecer com o leite.", "Acrescentar ao creme de açúcar e ovos o pão umedecido e bater até homogeneizar.", "Colocar em fôrma untada e caramelizada.", "Assar em banho-maria."]
+    },
+    "pudim_de_queijo": {
+        "name": "Pudim de queijo",
+        "category": "Pudins e Flans",
+        "icon": "fa-solid fa-utensils",
+        "description": "Pode-se usar queijo parmesão ou meia cura.",
+        "ingredients": [{"name": "Leite líquido", "percentage": "39,0"}, {"name": "Açúcar", "percentage": "31,4"}, {"name": "Farinha de trigo", "percentage": "7,8"}, {"name": "Margarina bolo", "percentage": "3,0"}, {"name": "Queijo ralado", "percentage": "3,8"}, {"name": "Ovos", "percentage": "15,0"}],
+        "method": ["Bater no liquidificador a margarina, ovos e leite.", "Misturar com o restante dos ingredientes.", "Colocar em fôrma untada e caramelizada.", "Assar em banho-maria.", "Desenformar frio."]
+    },
+    "bolo_pudim": {
+        "name": "Bolo pudim",
+        "category": "Bolos",
+        "icon": "fa-solid fa-utensils",
+        "description": "Pode-se adicionar 0,5% de essência de baunilha no pudim.",
+        "ingredients": [{"name": "Bolo: Farinha de trigo", "percentage": "25,6"}, {"name": "Bolo: Ovos", "percentage": "17,4"}, {"name": "Bolo: Açúcar", "percentage": "21,7"}, {"name": "Bolo: Margarina bolo", "percentage": "12,8"}, {"name": "Bolo: Leite líquido", "percentage": "15.3"}, {"name": "Bolo: Chocolate em pó", "percentage": "5.6"}, {"name": "Bolo: Fermento químico", "percentage": "1,5"}, {"name": "Pudim: Leite Condensado", "percentage": "45,5"}, {"name": "Pudim: Leite líquido", "percentage": "33,0"}, {"name": "Pudim: Ovos", "percentage": "21,5"}],
+        "method": ["Bater margarina e açúcar em 3ª velocidade com batedor globo até formar creme.", "Acrescentar os ovos aos poucos e continuar batendo.", "Peneirar farinha, fermento e chocolate, juntar ao creme e misturar em 1ª velocidade.", "Acrescentar o leite aos poucos em 1ª velocidade.", "Colocar em fôrma untada e caramelizada.", "Colocar o pudim e a massa do bolo na forma.", "Assar em banho-maria.", "Desenformar."]
+    },
+    "torta_suíça": {
+        "name": "Torta suíça",
+        "category": "Tortas",
+        "icon": "fa-solid fa-utensils",
+        "description": "",
+        "ingredients": [{"name": "Leite líquido", "percentage": "48,8"}, {"name": "Açúcar", "percentage": "26,8"}, {"name": "Farinha de trigo", "percentage": "7,3"}, {"name": "Queijo ou coco ralado", "percentage": "7,3"}, {"name": "Gemas", "percentage": "9,8"}],
+        "method": ["Misturar farinha e açúcar.", "Bater o restante dos ingredientes no liquidificador e juntar à mistura.", "Colocar em fôrma untada e caramelizada.", "Assar em banho-maria."]
+    },
+    "torta_de_ricota": {
+        "name": "Torta de ricota",
+        "category": "Tortas",
+        "icon": "fa-solid fa-utensils",
+        "description": "Outras opções para decoração da torta de ricota é geleia de frutas amarelas (geleia de brilho de maracujá com pêssego e abacaxi picados) ou frutas vermelhas.",
+        "ingredients": [{"name": "Ricota", "percentage": "33,1"}, {"name": "Ovos", "percentage": "13,2"}, {"name": "Amido de milho", "percentage": "2,0"}, {"name": "Leite condensado", "percentage": "26,5"}, {"name": "Açúcar", "percentage": "5,3"}, {"name": "Leite líquido", "percentage": "19,9"}],
+        "method": ["Untar a fôrma polvilhar açúcar.", "Bater todos os ingredientes no liquidificador.", "Assar em banho-maria.", "Decorar com goiabada cremosa."]
+    },
+    "brigadeirão": {
+        "name": "Brigadeirão",
+        "category": "Pudins e Flans",
+        "icon": "fa-solid fa-utensils",
+        "description": "Pode-se usar cacau em substituição ao chocolate em pó para se obter um produto menos doce e mais escuro.",
+        "ingredients": [{"name": "Leite condensado", "percentage": "51,8"}, {"name": "Leite líquido", "percentage": "25,9"}, {"name": "Chocolate em pó", "percentage": "10,4"}, {"name": "Margarina bolo", "percentage": "2,6"}, {"name": "Ovos", "percentage": "6,7"}, {"name": "Amido de milho", "percentage": "2,6"}],
+        "method": ["Bater todos os ingredientes no liquidificador.", "Colocar em fôrma untada e polvilhada com açúcar.", "Assar em banho-maria.", "Desenformar ainda morno.", "Decorar."]
+    },
+    "quindim": {
+        "name": "Quindim",
+        "category": "Doces Tradicionais",
+        "icon": "fa-solid fa-utensils",
+        "description": "Pode-se adicionar 0,1% de licor de anis para reduzir o cheiro de ovo. Pode-se hidratar o coco com o leite antes de misturar. O leite pode ser substituído por leite de coco.",
+        "ingredients": [{"name": "Gemas", "percentage": "39,1"}, {"name": "Açúcar", "percentage": "36.3"}, {"name": "Coco seco ralado", "percentage": "7,8"}, {"name": "Leite líquido", "percentage": "7,8"}, {"name": "Margarina", "percentage": "5,1"}, {"name": "Ovos", "percentage": "3,9"}],
+        "method": ["Derreter a gordura sem ferver.", "Peneirar gemas.", "Misturar todos os ingredientes.", "Untar as forminhas com margarina e polvilhar com açúcar ou untar com glicose.", "Colocar o quindim nas forminhas e deixar descansar por 30 minutos.", "Assar em banho-maria."]
+    },
+    "sequilhos": {
+        "name": "Sequilhos",
+        "category": "Biscoitos e Petit Fours",
+        "icon": "fa-solid fa-utensils",
+        "description": "Pode-se usar raspa de limão a gosto.",
+        "ingredients": [{"name": "Amido de milho", "percentage": "49,8"}, {"name": "Leite condensado", "percentage": "17,4"}, {"name": "Margarina bolo", "percentage": "17,4"}, {"name": "Ovos", "percentage": "7,5"}, {"name": "Açúcar", "percentage": "7,4"}, {"name": "Essência", "percentage": "0,5"}],
+        "method": ["Bater em 3ª velocidade com batedor globo, açúcar, ovos, gordura e essência.", "Misturar o amido delicadamente até ficar homogêneo.", "Acrescentar o leite condensado aos poucos, até dar o ponto.", "Modelar os sequilhos a gosto.", "Colocar em assadeira untada.", "Assar."]
+    },
+    "goiabinha": {
+        "name": "Goiabinha",
+        "category": "Biscoitos e Petit Fours",
+        "icon": "fa-solid fa-utensils",
+        "description": "",
+        "ingredients": [{"name": "Farinha", "percentage": "33,5"}, {"name": "Açúcar", "percentage": "11,3"}, {"name": "Ovos", "percentage": "4,8"}, {"name": "Leite liquido", "percentage": "3,2"}, {"name": "Margarina bolo", "percentage": "14"}, {"name": "Fermento químico", "percentage": "0,1"}, {"name": "Essência", "percentage": "0,1"}, {"name": "Recheio: Goiabada cascão", "percentage": "33"}],
+        "method": ["Misturar açúcar, gordura e essência.", "Adicionar os ovos à mistura e homogeneizar.", "Adicionar o leite aos poucos.", "Colocar a farinha e o fermento, misturar.", "Abrir a massa.", "Cortar no tamanho desejado.", "Rechear e Modelar.", "Assar."]
+    },
+    "sablé_de_mesa": {
+        "name": "Sablé de mesa",
+        "category": "Biscoitos e Petit Fours",
+        "icon": "fa-solid fa-utensils",
+        "description": "Para massa de chocolate, colocar 4,8% de chocolate em pó e retirar 4,8% de farinha.",
+        "ingredients": [{"name": "Farinha de trigo", "percentage": "47,6"}, {"name": "Margarina bolo", "percentage": "31,0"}, {"name": "Açúcar", "percentage": "16,1"}, {"name": "Ovos", "percentage": "4,8"}, {"name": "Essência", "percentage": "0,5"}],
+        "method": ["Misturar açúcar e gordura em 1ª velocidade com o batedor raquete.", "Acrescentar o restante dos ingredientes e misturar até ficar homogêneo.", "Levar à geladeira, coberta com filme plástico por 30 minutos.", "Abrir a massa e modelar ou cortar no formato desejado.", "Pincelar com ovos e polvilhar açúcar cristal.", "Assar."]
+    },
+    "petit_four_de_nozes": {
+        "name": "Petit four de nozes",
+        "category": "Biscoitos e Petit Fours",
+        "icon": "fa-solid fa-utensils",
+        "description": "",
+        "ingredients": [{"name": "Farinha de trigo", "percentage": "41,3"}, {"name": "Manteiga", "percentage": "28,1"}, {"name": "Açúcar refinado", "percentage": "13,2"}, {"name": "Nozes trituradas", "percentage": "12,4"}, {"name": "Gemas", "percentage": "4,5"}, {"name": "Essência de baunilha", "percentage": "0.5"}],
+        "method": ["Misturar açúcar e manteiga em 2ª velocidade com o batedor raquete.", "Juntar as gemas, a essência e misturar.", "Colocar a farinha e as nozes trituradas, misturar manualmente até incorporar sem pegar liga.", "Descansar a massa coberta com plástico em geladeira por 30 minutos.", "Abrir a massa, cortar ou modelar no formato desejado.", "Assar."]
+    },
+    "petit_four_salgado": {
+        "name": "Petit four salgado",
+        "category": "Salgados",
+        "icon": "fa-solid fa-utensils",
+        "description": "Pode-se decorar com azeitona cortada, orégano, castanha de caju em metades, queijo ralado, gergelim e outros.",
+        "ingredients": [{"name": "Farinha de trigo", "percentage": "50,8"}, {"name": "Ovos", "percentage": "13,2"}, {"name": "Margarina bolo", "percentage": "30,4"}, {"name": "Creme de leite", "percentage": "4,6"}, {"name": "Sal", "percentage": "1,0"}],
+        "method": ["Bater ovos, gordura e creme de leite em 2ª velocidade com batedor raquete até formar creme.", "Adicionar farinha e sal e misturar em 1ª velocidade ligeiramente, sem deixar pegar liga.", "Descansar a massa coberta com plástico na geladeira por 30 minutos.", "Abrir a massa sobre a mesa levemente enfarinhada.", "Cortar no formato desejado.", "Pincelar com gema e decorar.", "Assar."]
+    },
+    "petit-four_margarida": {
+        "name": "Petit-Four margarida",
+        "category": "Biscoitos e Petit Fours",
+        "icon": "fa-solid fa-utensils",
+        "description": "",
+        "ingredients": [{"name": "Farinha de trigo", "percentage": "35,7"}, {"name": "Margarina bolo", "percentage": "27,1"}, {"name": "Açúcar", "percentage": "17,9"}, {"name": "Ovos", "percentage": "13,6"}, {"name": "Amido de milho", "percentage": "5,3"}, {"name": "Essência", "percentage": "0,4"}],
+        "method": ["Misturar açúcar, essência e gordura.", "Juntar os ovos e misturar.", "Colocar a farinha, amido de milho e homogeneizar.", "Modelar com bico estrela aberta.", "Decorar com cereja.", "Assar."]
+    },
+    "sablé_de_saco": {
+        "name": "Sablé de saco",
+        "category": "Biscoitos e Petit Fours",
+        "icon": "fa-solid fa-utensils",
+        "description": "Para fazer sable de chocolate, usar 3% de chocolate em pó e diminuir 3% de farinha.",
+        "ingredients": [{"name": "Farinha de trigo", "percentage": "44,2"}, {"name": "Margarina bolo", "percentage": "22,2"}, {"name": "Açúcar", "percentage": "17,7"}, {"name": "Ovos", "percentage": "15,5"}, {"name": "Essência", "percentage": "0,4"}],
+        "method": ["Bater gordura e o açúcar em 2ª velocidade com o batedor globo até formar creme.", "Acrescentar os ovos aos poucos.", "Misturar levemente a farinha (peneirada) sem sovar.", "Modelar a gosto com bico crespo ou pitanga.", "Assar."]
+    },
+    "massa_flora": {
+        "name": "Massa flora",
+        "category": "Massas Base",
+        "icon": "fa-solid fa-utensils",
+        "description": "Pode-se usar raspa de limão. Essa massa pode ser utilizada como base para torta ou petit-four.",
+        "ingredients": [{"name": "Farinha de trigo", "percentage": "51,3"}, {"name": "Açúcar", "percentage": "15"}, {"name": "Margarina bolo", "percentage": "30,8"}, {"name": "Ovos", "percentage": "2,6"}, {"name": "Essência", "percentage": "0,3"}],
+        "method": ["Misturar açúcar e gordura.", "Juntar os ovos e misturar.", "Colocar a farinha e homogeneizar.", "Descansar a massa coberta com plástico em geladeira por 30 minutos.", "Assar."]
+    },
+    "bombocado_de_queijo": {
+        "name": "Bombocado de queijo",
+        "category": "Doces Tradicionais",
+        "icon": "fa-solid fa-utensils",
+        "description": "Usar queijo parmesão ou meia cura.",
+        "ingredients": [{"name": "Açúcar", "percentage": "40,5"}, {"name": "Farinha de trigo", "percentage": "8,1"}, {"name": "Margarina bolo", "percentage": "7,3"}, {"name": "Ovos", "percentage": "20,2"}, {"name": "Água", "percentage": "13,8"}, {"name": "Queijo ralado", "percentage": "4,0"}, {"name": "Coco ralado", "percentage": "6,1"}],
+        "method": ["Ferver a água e o açúcar até dissolver.", "Retirar do fogo, acrescentar a gordura e o coco, esfriar.", "Misturar o restante dos ingredientes.", "Colocar em forminhas de metal forradas com forminhas de papel.", "Assar."]
+    },
+    "queijadinha": {
+        "name": "Queijadinha",
+        "category": "Doces Tradicionais",
+        "icon": "fa-solid fa-utensils",
+        "description": "Em caso de utilizar coco seco para substituir o fresco, reidratar com água, leite ou leite de coco, utilizando como base o peso calculado para coco fresco, nas seguintes proporções: 63% de coco seco + 37% de líquido = 100% de coco úmido. Sendo que 100% de coco úmido é o peso do coco fresco calculado na formulação. Podem-se forrar forminhas de torteleta ou de empada com massa flora, encher com a queijadinha e assar.",
+        "ingredients": [{"name": "Açúcar", "percentage": "32,7"}, {"name": "Coco fresco", "percentage": "24,5"}, {"name": "Margarina bolo", "percentage": "7,5"}, {"name": "Farinha de trigo", "percentage": "4,9"}, {"name": "Ovos", "percentage": "20,6"}, {"name": "Leite líquido", "percentage": "8,2"}, {"name": "Queijo parmesão ralado", "percentage": "1,6"}],
+        "method": ["Misturar no liquidificador ovos, margarina e leite.", "Juntar farinha e açúcar e misturar aos líquidos manualmente.", "Acrescentar o coco e misturar.", "Colocar em forminhas de metal forradas com forminhas de papel.", "Assar."]
+    },
+    "cocadinha": {
+        "name": "Cocadinha",
+        "category": "Doces Tradicionais",
+        "icon": "fa-solid fa-utensils",
+        "description": "As cocadinhas podem ser decoradas com um pedaço de cereja ou de fruta cristalizada antes de assar.",
+        "ingredients": [{"name": "Coco ralado", "percentage": "33,7"}, {"name": "Açúcar", "percentage": "20,2"}, {"name": "Farinha de trigo", "percentage": "6,7"}, {"name": "Leite líquido", "percentage": "5,4"}, {"name": "Ovos", "percentage": "16,9"}, {"name": "Margarina bolo", "percentage": "16,9"}, {"name": "Essência de coco", "percentage": "0,2"}],
+        "method": ["Misturar açúcar e gordura manualmente.", "Acrescentar os ovos aos poucos.", "Separar o leite e acrescentar todos os outros ingredientes, homogeneizar.", "Acrescentar o leite até dar ponto, descansar por aproximadamente 20 minutos.", "Modelar com bico crespo sobre assadeira untada.", "Assar."]
+    },
+    "cocada_macron": {
+        "name": "Cocada macron",
+        "category": "Doces Tradicionais",
+        "icon": "fa-solid fa-utensils",
+        "description": "",
+        "ingredients": [{"name": "Açúcar", "percentage": "42,3"}, {"name": "Coco seco ralado", "percentage": "29,7"}, {"name": "Clara", "percentage": "21,2"}, {"name": "Farinha de trigo", "percentage": "6,4"}, {"name": "Essência", "percentage": "0,4"}],
+        "method": ["Levar o açúcar e claras ao fogo brando ou em banho-maria até atingir 60°C.", "Adicionar o coco com a farinha à mistura, deixar no fogo até diminuir a umidade, acrescentar a essência.", "Untar a assadeira.", "Modelar.", "Assar."]
+    },
+    "broa_airosa": {
+        "name": "Biscoitos e Petit Fours",
+        "category": "Biscoitos e Petit Fours",
+        "icon": "fa-solid fa-utensils",
+        "description": "Pode ser recheada com doce ou salgado. Pode ser modelada com bico liso.",
+        "ingredients": [{"name": "Margarina", "percentage": "13,5"}, {"name": "Farinha de trigo", "percentage": "13,5"}, {"name": "Açúcar", "percentage": "5,1"}, {"name": "Ovos", "percentage": "27,0"}, {"name": "Fubá", "percentage": "6,8"}, {"name": "Leite líquido", "percentage": "33,8"}, {"name": "Sal", "percentage": "0,2"}, {"name": "Erva-doce", "percentage": "0,1"}],
+        "method": ["Ferver margarina, açúcar, leite, sal e erva-doce.", "Acrescentar farinha e fubá misturados e cozinhar até desprender do fundo da panela.", "Colocar na batedeira com o batedor raquete e bater.", "Acrescentar os ovos aos poucos até atingir o ponto.", "Modelar com manga de confeitar e bico crespo sobre assadeira levemente untada.", "Polvilhar com fubá.", "Assar."]
+    },
+    "broa_caxambu": {
+        "name": "Broa caxambu",
+        "category": "Biscoitos e Petit Fours",
+        "icon": "fa-solid fa-utensils",
+        "description": "Pode-se polvilhar açúcar cristal após pincelar. Pode-se decorar com cortes leves antes de assar.",
+        "ingredients": [{"name": "Farinha de trigo", "percentage": "26,6"}, {"name": "Margarina bolo", "percentage": "16,0"}, {"name": "Açúcar", "percentage": "16,0"}, {"name": "Ovos", "percentage": "8,0"}, {"name": "Fubá", "percentage": "26,7"}, {"name": "Fermento químico", "percentage": "1,3"}, {"name": "Erva-doce", "percentage": "0,1"}, {"name": "Leite líquido", "percentage": "5,3"}],
+        "method": ["Misturar açúcar e gordura em 1ª velocidade com o batedor raquete.", "Juntar ovos aos poucos e misturar.", "Acrescentar todos os outros ingredientes secos e misturar.", "Juntar o leite até dar o ponto.", "Modelar bolinhas com as mãos untadas ou enfarinhadas.", "Colocar em assadeira levemente untada.", "Pincelar com gema.", "Assar."]
+    },
+    "maria_mole": {
+        "name": "Maria mole",
+        "category": "Doces Tradicionais",
+        "icon": "fa-solid fa-utensils",
+        "description": "Pode se colorir com corante gel. Pode ser modelada com bico de confeitar.",
+        "ingredients": [{"name": "Açúcar", "percentage": "59,7"}, {"name": "Água", "percentage": "35,8"}, {"name": "Gelatina sem sabor", "percentage": "4,2"}, {"name": "Essência de coco", "percentage": "0,3"}],
+        "method": ["Hidratar a gelatina com parte da água.", "Misturar o açúcar.", "Bater até montar.", "Colocar em fôrma untada e polvilhada com coco.", "Cortar no tamanho desejado.", "Passar no coco seco."]
+    },
+    "suspiro": {
+        "name": "Suspiro",
+        "category": "Doces Tradicionais",
+        "icon": "fa-solid fa-utensils",
+        "description": "Também chamado de merengue suíço. Pode-se deixar o suspiro secar fora do forno por 24 horas. Para deixar o suspiro mais duro, pode-se usar 2% de fécula ou amido de milho. Pode-se usar corante.",
+        "ingredients": [{"name": "Açúcar peneirado", "percentage": "66,4"}, {"name": "Clara", "percentage": "33,3"}, {"name": "Essência", "percentage": "0,3"}],
+        "method": ["Levar clara e açúcar ao fogo fraco ou banho-maria, mexendo sempre até derreter o açúcar.", "Bater, ainda quente, em 3ª velocidade com o batedor globo até dobrar de volume.", "Acrescentar a essência durante o batimento.", "Forrar uma assadeira com papel manteiga.", "Modelar os suspiros sobre o papel usando bico.", "Assar."]
+    },
+    "bolo_caçarola_italiana": {
+        "name": "Bolo caçarola italiana",
+        "category": "Bolos",
+        "icon": "fa-solid fa-utensils",
+        "description": "O queijo meia cura pode ser substituído por muçarela.",
+        "ingredients": [{"name": "Farinha de trigo", "percentage": "22,7"}, {"name": "Leite líquido", "percentage": "22,7"}, {"name": "Açúcar", "percentage": "22,7"}, {"name": "Ovos", "percentage": "13,6"}, {"name": "Queijo meia cura", "percentage": "11,4"}, {"name": "Fermento químico", "percentage": "1.2"}, {"name": "Óleo de soja", "percentage": "5,7"}],
+        "method": ["Peneirar a farinha e o fermento e reservar.", "Untar a fôrma com gordura e açúcar, colocar a calda de caramelo e reservar.", "Levar para a batedeira os ovos, o açúcar e o óleo em 3ª velocidade.", "Diminuir para a 2ª velocidade, acrescentar o queijo e bater até homogeneizar.", "Adicionar o leite e por último colocar a farinha e o fermento.", "Assar em banho-maria."]
+    },
+    "bolo_caçarola": {
+        "name": "Bolo caçarola",
+        "category": "Bolos",
+        "icon": "fa-solid fa-utensils",
+        "description": "O queijo parmesão pode ser substituído por muçarela ou meia cura.",
+        "ingredients": [{"name": "Farinha de trigo", "percentage": "21"}, {"name": "Leite líquido", "percentage": "27,8"}, {"name": "Açúcar", "percentage": "28,3"}, {"name": "Ovos", "percentage": "14,4"}, {"name": "Queijo parmesão", "percentage": "2"}, {"name": "Fermento químico", "percentage": "1.2"}, {"name": "Óleo de soja", "percentage": "4,5"}],
+        "method": ["Peneirar a farinha, o fermento e reservar.", "Bater açúcar, ovos e óleo em 3ª velocidade, até formar creme homogêneo.", "Acrescentar os outros ingredientes e misturar em 1ª velocidade.", "Juntar o leite aos poucos e misturar.", "Colocar em fôrma untada e enfarinhada com farinha de rosca.", "Assar."]
+    },
+    "bolo_de_fubá": {
+        "name": "Bolo de fubá",
+        "category": "Bolos",
+        "icon": "fa-solid fa-utensils",
+        "description": "",
+        "ingredients": [{"name": "Fubá", "percentage": "20,2"}, {"name": "Margarina", "percentage": "6,7"}, {"name": "Açúcar", "percentage": "22,4"}, {"name": "Ovos", "percentage": "17,8"}, {"name": "Leite líquido", "percentage": "26,8"}, {"name": "Fermento químico", "percentage": "1,2"}, {"name": "Farinha de trigo", "percentage": "4,8"}, {"name": "Erva-doce", "percentage": "0,1"}],
+        "method": ["Peneirar a farinha, o fermento e reservar.", "Ferver gordura, leite, açúcar e erva-doce.", "Acrescentar fubá e cozinhar em fogo baixo mexendo sempre até engrossar.", "Colocar na batedeira em 3ª velocidade com batedor globo até esfriar.", "Acrescentar ovos aos poucos e continuar batendo.", "Juntar farinha e fermento e misturar em 1ª velocidade até incorporar.", "Colocar em fôrma untada e enfarinhada.", "Decorar com açúcar e canela.", "Assar."]
+    },
+    "bolo_inglês": {
+        "name": "Bolo inglês",
+        "category": "Bolos",
+        "icon": "fa-solid fa-utensils",
+        "description": "Pode ser adicionado sobre o peso total da massa 13% de complementos, como: frutas cristalizadas ou, uvas passas ou, gotas de chocolate meio amargo ou cerejas em calda, entre outros.",
+        "ingredients": [{"name": "Farinha de trigo", "percentage": "26,1"}, {"name": "Margarina bolo", "percentage": "14,1"}, {"name": "Açúcar", "percentage": "24,3"}, {"name": "Ovos", "percentage": "14,1"}, {"name": "Fermento químico", "percentage": "1,0"}, {"name": "Amido de milho", "percentage": "1,8"}, {"name": "Leite líquido", "percentage": "18,5"}, {"name": "Essência de laranja", "percentage": "0,1"}],
+        "method": ["Peneirar a farinha, amido, fermento e reservar.", "Bater gordura, açúcar e acrescentar os ovos aos poucos em 3ª velocidade com batedor globo até formar creme.", "Adicionar os ingredientes secos ao creme misturando em 1ª velocidade, alternando com leite.", "Colocar em fôrma untada e enfarinhada.", "Assar."]
+    },
+    "bolo_frapê": {
+        "name": "Bolo frapê",
+        "category": "Bolos",
+        "icon": "fa-solid fa-utensils",
+        "description": "Untar uma espátula com óleo e introduzi-la na massa do bolo no sentido do comprimento até o meio da massa.",
+        "ingredients": [{"name": "Farinha de trigo", "percentage": "29,2"}, {"name": "Açúcar", "percentage": "23,7"}, {"name": "Amido de milho", "percentage": "1,5"}, {"name": "Margarina bolo", "percentage": "10,2"}, {"name": "Ovos", "percentage": "13,7"}, {"name": "Chocolate em pó", "percentage": "1,5"}, {"name": "Fermento químico", "percentage": "1,5"}, {"name": "Leite líquido", "percentage": "18,4"}, {"name": "Essência", "percentage": "0,3"}],
+        "method": ["Peneirar a farinha, amido, fermento e reservar.", "Peneirar o chocolate e reservar.", "Bater gordura e açúcar em 3ª velocidade com batedor globo até formar creme.", "Acrescentar os ovos aos poucos e adicionar o restante dos ingredientes em 1ª velocidade, alternando os secos com o leite.", "Dividir a massa em três partes e colocar o chocolate em uma das partes.", "Colocar em fôrma tipo bolo inglês untada e enfarinhada alternando massa branca, massa com chocolate e massa branca.", "Talhar.", "Assar."]
+    },
+    "bolo_mármore": {
+        "name": "Bolo mármore",
+        "category": "Bolos",
+        "icon": "fa-solid fa-utensils",
+        "description": "Quando frio, cobrir o bolo com chocolate derretido.",
+        "ingredients": [{"name": "Margarina bolo", "percentage": "20,2"}, {"name": "Farinha de trigo", "percentage": "20.2"}, {"name": "Açúcar", "percentage": "20,2"}, {"name": "Claras", "percentage": "17,0"}, {"name": "Gemas", "percentage": "13,3"}, {"name": "Chocolate em pó", "percentage": "2,0"}, {"name": "Fermento químico", "percentage": "1,0"}, {"name": "Rum", "percentage": "6,1"}],
+        "method": ["Peneirar a farinha, fermento e reservar.", "Peneirar o chocolate e reservar.", "Bater as claras em neve e reservar.", "Bater gordura e açúcar em 3ª velocidade com batedor globo até formar creme.", "Acrescentar gemas, rum e bater.", "Misturar a farinha, fermento em 1ª velocidade.", "Misturar manually as claras em neve.", "Separar 1/3 da massa e acrescentar o chocolate em pó.", "Colocar em fôrma untada e enfarinhada alternando massa branca, massa com chocolate e massa branca.", "Assar."]
+    },
+    "bolo_chiffon_de_chocolate": {
+        "name": "Bolo chiffon de chocolate",
+        "category": "Bolos",
+        "icon": "fa-solid fa-utensils",
+        "description": "",
+        "ingredients": [{"name": "Farinha de trigo", "percentage": "17,3"}, {"name": "Açúcar", "percentage": "25,1"}, {"name": "Ovos", "percentage": "32,9"}, {"name": "Água quente", "percentage": "11,8"}, {"name": "Chocolate em pó", "percentage": "4,0"}, {"name": "Óleo de girassol", "percentage": "7,8"}, {"name": "Fermento químico", "percentage": "0,8"}, {"name": "Essência de baunilha", "percentage": "0,3"}],
+        "method": ["Peneirar farinha de trigo e fermento e reservar.", "Dissolver o chocolate em pó na água quente e reservar.", "Bater claras em neve e reservar.", "Bater gemas, açúcar e essência em 3ª velocidade com batedor globo até formar um creme.", "Acrescentar o óleo aos poucos, sem parar de bater.", "Acrescentar os secos alternando com o chocolate dissolvido em 1ª velocidade.", "Acrescentar as claras em neve manualmente.", "Colocar em assadeira untada ou forrada com papel manteiga.", "Assar."]
+    },
+    "biscoito_de_polvilho": {
+        "name": "Biscoito de polvilho",
+        "category": "Salgados",
+        "icon": "fa-solid fa-utensils",
+        "description": "Pode se acrescentar queijo ralado na massa.",
+        "ingredients": [{"name": "Polvilho azedo", "percentage": "45,9"}, {"name": "Óleo", "percentage": "11,5"}, {"name": "Leite líquido", "percentage": "11,5"}, {"name": "Ovos", "percentage": "4,5"}, {"name": "Sal", "percentage": "1,6"}, {"name": "Água", "percentage": "25,0"}],
+        "method": ["Ferver óleo e leite.", "Escaldar o polvilho.", "Levar à batedeira.", "Acrescentar ovos, sal e bater em 2ª velocidade.", "Acrescentar a água aos poucos e até dar o ponto.", "Modelar sobre assadeira levemente untada com bico liso pequeno.", "Assar."]
+    },
+    "pão_de_queijo": {
+        "name": "Pão de queijo",
+        "category": "Salgados",
+        "icon": "fa-solid fa-utensils",
+        "description": "Pode-se passar as bolinhas de pão de queijo em queijo ralado antes de assar. O bloco de massa pode ser congelada ou modelados em peças para o consumo. Pode-se acrescentar ervas aromáticas à massa como orégano, cebolinha, salsa e cebola desidratada, entre outras.",
+        "ingredients": [{"name": "Queijo meia cura", "percentage": "35"}, {"name": "Polvilho doce", "percentage": "7"}, {"name": "Ovos", "percentage": "8,5"}, {"name": "Margarina", "percentage": "3,4"}, {"name": "Leite líquido", "percentage": "17,4"}, {"name": "Sal", "percentage": "0,7"}, {"name": "Polvilho azedo", "percentage": "28"}],
+        "method": ["Ralar ou moer o queijo e reservar.", "Aquecer a gordura com o leite e escaldar o polvilho.", "Acrescentar o queijo, os ovos e o sal e bater com o batedor raquete em 3ª velocidade.", "Modelar.", "Colocar em assadeira levemente untada.", "Assar."]
+    },
+    "coxinha": {
+        "name": "Coxinha",
+        "category": "Salgados",
+        "icon": "fa-solid fa-utensils",
+        "description": "O recheio representa 70% do peso total da massa. Exemplo: se a massa total da coxinha pesar 3000g, o peso do recheio será de 2100g.",
+        "ingredients": [{"name": "Caldo do cozimento do frango", "percentage": "61,3"}, {"name": "Farinha de trigo", "percentage": "30,8"}, {"name": "Margarina", "percentage": "6,1"}, {"name": "Caldo de galinha em pó", "percentage": "1,8"}],
+        "method": ["Cozinhar o frango em água com temperos a gosto, sal e caldo de galinha.", "Retirar o frango da água de cozimento, desfiar e reservar para preparar o recheio da coxinha.", "Medir a água do cozimento e voltar para fervura com a margarina.", "Acrescentar a farinha de trigo de uma só vez e cozinhar.", "Retirar do fogo, esfriar ligeiramente.", "Sovar a massa.", "Modelar as coxinhas.", "Empanar.", "Fritar em óleo quente."]
+    },
+    "risoles": {
+        "name": "Risoles",
+        "category": "Salgados",
+        "icon": "fa-solid fa-utensils",
+        "description": "Pode-se utilizar essa massa para produzir salsicha empanada ou bolinhas recheadas. O recheio pode ser de presunto ou calabresa com muçarela.",
+        "ingredients": [{"name": "Leite líquido", "percentage": "65,4"}, {"name": "Farinha de trigo", "percentage": "29,5"}, {"name": "Gordura vegetal hidrogenada", "percentage": "3,9"}, {"name": "Sal", "percentage": "1,2"}],
+        "method": ["Preparar o recheio e reservar.", "Ferver leite, gordura e sal.", "Acrescentar a farinha peneirada de uma só vez e cozinhar.", "Sovar a massa.", "Rechear.", "Modelar os salgados.", "Empanar.", "Fritar em óleo quente."]
+    },
+    "esfiha_fechada": {
+        "name": "Esfiha fechada",
+        "category": "Salgados",
+        "icon": "fa-solid fa-utensils",
+        "description": "O recheio representa 70% do peso total da massa. Exemplo: se a massa total da esfiha pesar 3000g, o peso do recheio será de 2100g.",
+        "ingredients": [{"name": "Farinha de trigo", "percentage": "55,3"}, {"name": "Sal", "percentage": "1,0"}, {"name": "Açúcar", "percentage": "2,2"}, {"name": "Margarina", "percentage": "5,5"}, {"name": "Fermento biol. fresco", "percentage": "2,8"}, {"name": "Leite líquido", "percentage": "33,2"}],
+        "method": ["Preparar o recheio e reservar.", "Misturar farinha peneirada com sal, açúcar em 1ª velocidade com o batedor gancho por 1 minuto.", "Acrescentar o leite aos poucos até a massa ficar úmida.", "Acrescentar a margarina e misturar.", "Passar para 2ª velocidade e acrescentar o fermento.", "Bater a massa em 2ª velocidade até fica lisa e enxuta.", "Dividir a massa e descansar coberta por 20 minutos.", "Modelar, fermentar e pincelar com ovos.", "Assar."]
+    },
+    "empada": {
+        "name": "Empada",
+        "category": "Salgados",
+        "icon": "fa-solid fa-utensils",
+        "description": "A banha pode ser substituída por gordura hidrogenada. O recheio representa 70% do peso total da massa. Exemplo: se a massa total da esfiha pesar 3000g, o peso do recheio será de 2100g.",
+        "ingredients": [{"name": "Farinha de trigo", "percentage": "55,3"}, {"name": "Banha", "percentage": "27,7"}, {"name": "Gemas", "percentage": "2,2"}, {"name": "Refrigerante sabor guaraná", "percentage": "13,8"}, {"name": "Sal", "percentage": "1,0"}],
+        "method": ["Preparar o recheio e reservar.", "Misturar farinha peneirada com a banha e gemas em 1ª velocidade com o batedor raquete ou manualmente até formar uma farofa.", "Acrescentar guaraná aos poucos e misturar até ficar homogêneo.", "Descansar a massa coberta em geladeira por 30 minutos.", "Modelar em forminhas.", "Pincelar com ovos.", "Assar."]
+    },
+    "croissant_i": {
+        "name": "Croissant I",
+        "category": "Pães e Massas Doces",
+        "icon": "fa-solid fa-utensils",
+        "description": "Descansar a massa a cada dobra. Retirar toda a farinha da superfície da massa antes de cada dobra. Estender a massa para cortar na espessura de meio centímetro, aproximadamente. Pode-se utilizar margarina para folhar na quantidade de 16% até 28%.",
+        "ingredients": [{"name": "Farinha de trigo", "percentage": "55,9"}, {"name": "Sal", "percentage": "1,0"}, {"name": "Açúcar", "percentage": "5,6"}, {"name": "Margarina", "percentage": "2,8"}, {"name": "Leite em pó", "percentage": "1,1"}, {"name": "Ovos", "percentage": "2,8"}, {"name": "Água", "percentage": "28,0"}, {"name": "Fermento biológico fresco", "percentage": "2,8"}, {"name": "Margarina para folhar", "percentage": "20"}],
+        "method": ["Peneirar a farinha e misturar aos demais ingredientes secos em 1ª velocidade com o gancho.", "Acrescentar água aos poucos, ovos e gordura.", "Misturar até ficar homogêneo.", "Descansar a massa coberta com plástico por 2 minutos.", "Estender a massa sobre a mesa levemente enfarinhada.", "Espalhar a gordura para folhar em 2/3 da massa e fechar em forma de envelope.", "Dar 3 dobras de 3 voltas.", "Estender, cortar, enrolar, pincelar com ovos e fermentar.", "Assar."]
+    },
+    "croissant_ii": {
+        "name": "Croissant II",
+        "category": "Pães e Massas Doces",
+        "icon": "fa-solid fa-utensils",
+        "description": "Descansar a massa a cada dobra. Retirar toda a farinha da superfície da massa antes de cada dobra. Estender a massa para cortar na espessura de meio centímetro, aproximadamente. Pode-se utilizar margarina para folhar na quantidade de 16% até 28%.",
+        "ingredients": [{"name": "Farinha de trigo", "percentage": "57,9"}, {"name": "Sal", "percentage": "1,0"}, {"name": "Açúcar", "percentage": "2,3"}, {"name": "Margarina", "percentage": "2,9"}, {"name": "Leite em pó", "percentage": "1,2"}, {"name": "Ovos", "percentage": "2,9"}, {"name": "Água", "percentage": "28,9"}, {"name": "Fermento biológico fresco", "percentage": "2,9"}, {"name": "Margarina para folhar", "percentage": "20"}],
+        "method": ["Peneirar a farinha e misturar aos demais ingredientes secos em 1ª velocidade com o gancho.", "Acrescentar água aos poucos, ovos e gordura.", "Misturar até ficar homogêneo.", "Descansar a massa coberta com plástico por 20 minutos.", "Estender a massa sobre a mesa levemente enfarinhada.", "Espalhar a gordura para folhar em 2/3 da massa e fechar em forma de envelope.", "Dar 3 dobras de 3 voltas.", "Estender, cortar, enrolar, pincelar com ovos e fermentar.", "Assar."]
+    },
+    "pão_doce": {
+        "name": "Pão doce",
+        "category": "Pães e Massas Doces",
+        "icon": "fa-solid fa-utensils",
+        "description": "Dosar o melhorador de acordo com a recomendação do fabricante. Depois de assado, decorar com geleia de brilho, foundant, creme baunilha, frutas, xerém, coco ralado ou outros.",
+        "ingredients": [{"name": "Farinha de trigo", "percentage": "52,9"}, {"name": "Açúcar", "percentage": "9,5"}, {"name": "Sal", "percentage": "0,8"}, {"name": "Leite em pó", "percentage": "2,1"}, {"name": "Margarina", "percentage": "6,3"}, {"name": "Ovos", "percentage": "5,3"}, {"name": "Gemas", "percentage": "2,6"}, {"name": "Fermento biológico fresco", "percentage": "4,2"}, {"name": "Água", "percentage": "15,8"}, {"name": "Melhorador", "percentage": "0,5"}],
+        "method": ["Fazer uma massa (esponja) com 30% da farinha de trigo que será utilizada na formulação, todo o fermento e água até que a massa apresente consistência macia.", "Descansar até dobrar de volume.", "Juntar a esponja e a farinha ao restante dos ingredientes misturar em 1ª velocidade até ficar homogêneo.", "Passar para 2ª velocidade e bater até o desenvolvimento de rede de glúten.", "Dividir a massa e descansar.", "Modelar e pincelar com ovos.", "Fermentar.", "Assar."]
+    },
+    "sonho": {
+        "name": "Sonho",
+        "category": "Pães e Massas Doces",
+        "icon": "fa-solid fa-utensils",
+        "description": "Se o sonho não for pré-assado deve ser frito em óleo não muito quente.",
+        "ingredients": [{"name": "Farinha de trigo", "percentage": "56,6"}, {"name": "Sal", "percentage": "0,8"}, {"name": "Açúcar", "percentage": "5,7"}, {"name": "Ovos", "percentage": "5,7"}, {"name": "Margarina", "percentage": "5,7"}, {"name": "Fermento biológico fresco", "percentage": "2,8"}, {"name": "Água", "percentage": "22,7"}],
+        "method": ["Peneirar a farinha e misturar aos demais ingredientes secos em 1ª velocidade com o gancho.", "Adicionar água, aos poucos, e depois ovos e gordura.", "Misturar até ficar homogêneo.", "Passar para 2ª velocidade e acrescentar o fermento.", "Bater até o desenvolvimento da rede de glúten.", "Dividir a massa, cobrir com plástico e deixar a massa descansar 20 minutos.", "Modelar e fermentar.", "Pré-assar.", "Fritar.", "Rechear e dar acabamento."]
+    },
+    "bomba_carolina": {
+        "name": "Bomba carolina",
+        "category": "Pães e Massas Doces",
+        "icon": "fa-solid fa-utensils",
+        "description": "Pode-se acrescentar 0,5% de essência de baunilha.",
+        "ingredients": [{"name": "Farinha de trigo", "percentage": "19,1"}, {"name": "Margarina", "percentage": "16,4"}, {"name": "Água", "percentage": "31,9"}, {"name": "Ovos", "percentage": "31,8"}, {"name": "Sal", "percentage": "0,2"}, {"name": "Açúcar", "percentage": "0,6"}],
+        "method": ["Ferver água, margarina, sal e açúcar.", "Acrescentar a farinha peneirada mexendo sempre até cozinhar.", "Colocar na batedeira com o batedor raquete e bater em 3ª velocidade.", "Adicionar os ovos gradualmente.", "Modelar com bico, em assadeira untada.", "Assar."]
+    },
+    "pão_de_mel": {
+        "name": "Pão de mel",
+        "category": "Bolos",
+        "icon": "fa-solid fa-utensils",
+        "description": "Pode-se colocar 5% de chocolate em pó na massa e aumentar para 0,6% o bicarbonato. O pão de mel pode ser recheado.",
+        "ingredients": [{"name": "Farinha de trigo", "percentage": "32,6"}, {"name": "Margarina bolo", "percentage": "11,4"}, {"name": "Açúcar mascavo", "percentage": "16,3"}, {"name": "Ovos", "percentage": "10,8"}, {"name": "Mel", "percentage": "16,3"}, {"name": "Leite líquido", "percentage": "11,4"}, {"name": "Bicarbonato", "percentage": "0,5"}, {"name": "Canela em pó", "percentage": "0,3"}, {"name": "Noz moscada em pó", "percentage": "0,2"}, {"name": "Cravo em pó", "percentage": "0,2"}],
+        "method": ["Peneirar a farinha e reservar.", "Bater em 3ª velocidade açúcar mascavo e gordura até formar creme com o batedor globo.", "Continuar batendo e colocar os ovos aos poucos.", "Acrescentar o restante dos ingredientes e bater em 1ª velocidade.", "Colocar em fôrma untada e enfarinhada.", "Assar.", "Esfriar e cobrir com chocolate derretido."]
+    },
+    "bombom_crocante": {
+        "name": "Bombom crocante",
+        "category": "Bombons e Trufas",
+        "icon": "fa-solid fa-utensils",
+        "description": "Pode-se substituir o xerém por nozes, castanhas, amêndoas, crocante industrializado ou 5% de flocos de arroz.",
+        "ingredients": [{"name": "Chocolate ao leite", "percentage": "89,0"}, {"name": "Xerém", "percentage": "11,0"}],
+        "method": ["Derreter o chocolate e dar têmpera.", "Misturar o xerém.", "Distribuir a massa em formas para bombom.", "Levar à geladeira para cristalizar.", "Retirar da geladeira e desenformar."]
+    },
+    "bombom_prestígio": {
+        "name": "Bombom prestígio",
+        "category": "Bombons e Trufas",
+        "icon": "fa-solid fa-utensils",
+        "description": "",
+        "ingredients": [{"name": "Chocolate ao leite fracionado", "percentage": "100"}, {"name": "Recheio: Foundant", "percentage": "54,6"}, {"name": "Recheio: Coco ralado", "percentage": "27,3"}, {"name": "Recheio: Rum", "percentage": "1,7"}, {"name": "Recheio: Leite condensado", "percentage": "16,4"}],
+        "method": ["Aquecer o foundant e misturar o leite condensado e o rum.", "Misturar o coco ralado até dar o ponto.", "Fazer bolinhas.", "Derreter o chocolate em banho-maria.", "Banhar as bolinhas no chocolate derretido e antes de cristalizar totalmente, enfeitar com coco ralado."]
+    },
+    "trufas": {
+        "name": "Trufas",
+        "category": "Bombons e Trufas",
+        "icon": "fa-solid fa-utensils",
+        "description": "Pode-se misturar na massa das trufas, cerejas picadas ou rechear com cereja inteiras, uva passa, nozes entre outros. Se a massa de trufa for utilizada para recheio, seguir a seguinte proporção: 30% de creme de leite; 34% de chocolate ao leite; 34% de chocolate meio amargo; 1,5% de conhaque.",
+        "ingredients": [{"name": "Chocolate meio amargo", "percentage": "36,5"}, {"name": "Chocolate ao leite", "percentage": "36,5"}, {"name": "Creme de leite", "percentage": "25,5"}, {"name": "Conhaque", "percentage": "1,5"}],
+        "method": ["Derreter o chocolate em banho-maria ou microondas.", "Retirar o chocolate do banho-maria e acrescentar o creme de leite e o conhaque.", "Misturar para incorporar.", "Esfriar e levar a geladeira por 6 horas.", "Enrolar e passar em chocolate em pó ou cacau em pó."]
+    },
+    "massa_folhada": {
+        "name": "Massa folhada",
+        "category": "Massas Base",
+        "icon": "fa-solid fa-utensils",
+        "description": "Retirar a farinha da massa a cada dobra. Descansar a massa a cada dobra em geladeira. Essa massa pode ser usada para produtos doces ou salgados. Fazer com um dia de antecedência e guardar em geladeira.",
+        "ingredients": [{"name": "Farinha de trigo", "percentage": "62,1"}, {"name": "Água", "percentage": "31,1"}, {"name": "Sal", "percentage": "0,6"}, {"name": "Ovos", "percentage": "3,1"}, {"name": "Margarina", "percentage": "3,1"}, {"name": "Margarina para folhar", "percentage": "38"}],
+        "method": ["Misturar todos os ingredientes secos em 1ª velocidade com o gancho.", "Acrescentar água aos poucos, ovos e gordura.", "Misturar até ficar homogêneo.", "Descansar a massa coberta com plástico por 20 minutos.", "Abrir a massa sobre a mesa levemente enfarinhada.", "Colocar a gordura para folhar em 2/3 da massa.", "Efetuar o processo de folhar.", "Repetir por 5 vezes.", "Laminar a massa, cortar e modelar a gosto.", "Assar."]
+    },
+    "pão_de_ló": {
+        "name": "Pão de ló",
+        "category": "Bolos",
+        "icon": "fa-solid fa-utensils",
+        "description": "Para se obter um pão de ló mais macio, substituir os 28,5 de farinha de trigo da formulação pela seguintes proporções: 22,8% de farinha de trigo + 5,7% de amido de milho = 28,5% de farinha da formulação.",
+        "ingredients": [{"name": "Farinha de trigo", "percentage": "28,5"}, {"name": "Açúcar", "percentage": "28,5"}, {"name": "Ovos", "percentage": "42,7"}, {"name": "Essência", "percentage": "0,3"}],
+        "method": ["Peneirar farinha e reservar.", "Bater ovos, açúcar e essência em 3ª velocidade com batedor globo até dobrar de volume.", "Acrescentar a farinha e misturar levemente em 1ª velocidade ou manualmente.", "Colocar em assadeira untada ou forrada com papel manteiga.", "Assar."]
+    },
+    "pão-de-ló_com_emulsificante": {
+        "name": "Pão-de-ló com emulsificante",
+        "category": "Bolos",
+        "icon": "fa-solid fa-utensils",
+        "description": "Para se obter um pão de ló mais macio, substituir os 26,5 de farinha de trigo da formulação pela seguintes proporções: 21,2% de farinha de trigo + 5,3% de amido de milho = 26,5% de farinha da formulação.",
+        "ingredients": [{"name": "Farinha de trigo", "percentage": "26,5"}, {"name": "Açúcar", "percentage": "26,4"}, {"name": "Ovos", "percentage": "39,7"}, {"name": "Essência", "percentage": "0,3"}, {"name": "Emulsificante", "percentage": "1,3"}, {"name": "Água", "percentage": "5,3"}, {"name": "Fermento químico", "percentage": "0,5"}],
+        "method": ["Peneirar farinha, açúcar e fermento juntos.", "Adicionar todos os ingredientes na batedeira, homogeneizar e bater em velocidade alta de 3 a 7 minutos.", "Assar."]
+    },
+    "pão_de_ló_de_chocolate": {
+        "name": "Pão de ló de chocolate",
+        "category": "Bolos",
+        "icon": "fa-solid fa-utensils",
+        "description": "",
+        "ingredients": [{"name": "Açúcar", "percentage": "26,5"}, {"name": "Farinha", "percentage": "22,5"}, {"name": "Chocolate em pó", "percentage": "5,3"}, {"name": "Ovos", "percentage": "39,9"}, {"name": "Água", "percentage": "5,3"}, {"name": "Fermento químico", "percentage": "0,5"}],
+        "method": ["Peneirar farinha, fermento e cacau em pó e reservar.", "Bater ovos com açúcar em 3ª velocidade com batedor globo até dobrar de volume.", "Passar para 1ª velocidade ou manualmente, acrescentar a farinha alternando com a água até ficar homogêneo.", "Colocar em assadeira untada ou forrada com papel manteiga.", "Assar."]
+    },
+    "pão_de_ló_de_nozes": {
+        "name": "Pão de ló de nozes",
+        "category": "Bolos",
+        "icon": "fa-solid fa-utensils",
+        "description": "Para se obter um pão de ló mais macio, substituir os 24,3 de farinha de trigo da formulação pela seguintes proporções: 19,4% de farinha de trigo + 4,9% de amido de milho = 24,3% de farinha da formulação.",
+        "ingredients": [{"name": "Farinha de trigo", "percentage": "24,3"}, {"name": "Açúcar", "percentage": "24,3"}, {"name": "Ovos", "percentage": "36,2"}, {"name": "Licor de cacau", "percentage": "1,8"}, {"name": "Farinha de rosca", "percentage": "2,7"}, {"name": "Fermento químico", "percentage": "0,7"}, {"name": "Nozes picadas", "percentage": "10"}],
+        "method": ["Peneirar o fermento, as farinhas de trigo e rosca e reservar.", "Bater ovos, açúcar e licor de cacau em 3ª velocidade com batedor globo até dobrar de volume.", "Acrescentar os secos ao creme e as nozes em 1ª velocidade ou manualmente.", "Colocar em assadeira untada ou forrada com papel manteiga.", "Assar."]
+    },
+    "cestinha_de_lixo": {
+        "name": "Cestinha de lixo",
+        "category": "Montagem e Decoração",
+        "icon": "fa-solid fa-utensils",
+        "description": "Para substituir o papel manteiga pode ser utilizado acetato. Podem-se usar moldes redondos, retangulares ou quadrados. * q.b. – quanto baste.",
+        "ingredients": [{"name": "Pão de ló", "percentage": "q.b*."}, {"name": "Calda para umedecer", "percentage": "q.b."}, {"name": "Chocolate meio amargo fracionado", "percentage": "q.b."}, {"name": "Chantilly batido", "percentage": "q.b."}, {"name": "Fios de ovos", "percentage": "q.b."}, {"name": "Cerejas", "percentage": "q.b."}],
+        "method": ["Cortar papel manteiga um centímetro maior que o tamanho desejado para a lata de lixo, no sentido de sua circunferência.", "Cortar o pão de ló com o mesmo aro usado para fazer o molde de papel.", "Derreter o chocolate em banho-maria.", "Passar o papel no chocolate sem deixar bolhas e enrolar no pão de ló.", "Resfriar para endurecer o chocolate.", "Umedecer o pão de ló com a calda.", "Rechear com chantilly batido.", "Decorar com fios de ovos e cerejas."]
+    },
+    "tortinhas_de_frutas": {
+        "name": "Tortinhas de frutas",
+        "category": "Tortas",
+        "icon": "fa-solid fa-utensils",
+        "description": "A base das tortinhas é produzida com massa flora. As tortinhas de frutas podem ser decoradas na lateral com xerem ou coco ralado. A decoração da tortinha de limão pode ser com raspas de limão (zestes) ou queimar o merengue com maçarico.",
+        "ingredients": [{"name": "Base para tortinhas", "percentage": "q.b*."}, {"name": "Creme de baunilha", "percentage": "q.b."}, {"name": "Frutas", "percentage": "q.b."}, {"name": "Geleia de brilho", "percentage": "q.b."}, {"name": "Creme de limão", "percentage": "q.b."}, {"name": "Merengue italiano", "percentage": "q.b."}],
+        "method": ["Montagem:Tortinhas de frutas:", "Rechear as bases das tortinhas com creme de baunilha.", "Decorar com as frutas.", "Finalizar com geleia de brilho.", "Tortinhas de limão:", "Rechear as bases das tortinhas com creme de limão.", "Cobrir com merengue italiano.", "Decorar."]
+    },
+    "bolo_prestígio": {
+        "name": "Bolo prestígio",
+        "category": "Bolos",
+        "icon": "fa-solid fa-utensils",
+        "description": "Podem ser feitas quantas camadas de pão de ló e recheio desejar.",
+        "ingredients": [{"name": "Pão de ló de chocolate", "percentage": "30"}, {"name": "Calda", "percentage": "15"}, {"name": "Recheio de coco", "percentage": "30"}, {"name": "Creme paris (cobertura)", "percentage": "25"}],
+        "method": ["Montagem do bolo:", "massa de pão de ló;", "umedecer com calda;", "distribuir o recheio de coco;", "outra massa de pão de ló;", "cobrir com creme paris;", "decorar com coco ralado ou com chocolate ralado."]
+    },
+    "bolo_brigadeiro": {
+        "name": "Bolo Brigadeiro",
+        "category": "Bolos",
+        "icon": "fa-solid fa-utensils",
+        "description": "Podem ser feitas quantas camadas de pão de ló e recheio desejar.",
+        "ingredients": [{"name": "Pão de ló de chocolate", "percentage": "30"}, {"name": "Calda", "percentage": "15"}, {"name": "Recheio de brigadeiro", "percentage": "30"}, {"name": "Cobertura de brigadeiro", "percentage": "25"}, {"name": "Brigadeiro para decorar", "percentage": "q.b."}],
+        "method": ["Montagem do bolo:", "massa de pão de ló;", "umedecer com calda;", "distribuir o recheio de brigadeiro;", "outra massa de pão de ló;", "cobrir com cobertura de brigadeiro;", "decorar com chocolate granulado e brigadeiro para decorar."]
+    },
+    "bolo_trufado_de_café": {
+        "name": "Bolo trufado de café",
+        "category": "Bolos",
+        "icon": "fa-solid fa-utensils",
+        "description": "Podem ser feitas quantas camadas de pão de ló e recheio desejar. Pode-se utilizar chantilly de chocolate.",
+        "ingredients": [{"name": "Pão de ló de chocolate", "percentage": "30"}, {"name": "Calda", "percentage": "15"}, {"name": "Recheio trufado de café", "percentage": "30"}, {"name": "Chantilly", "percentage": "25"}],
+        "method": ["Montagem do bolo:", "massa de pão de ló;", "umedecer com calda;", "distribuir o recheio trufado de café;", "outra massa de pão de ló;", "cobrir com chantilly;", "decorar com bico de confeitar."]
+    },
+    "bolo_de_nozes": {
+        "name": "Bolo de nozes",
+        "category": "Bolos",
+        "icon": "fa-solid fa-utensils",
+        "description": "Podem ser feitas quantas camadas de pão de ló e recheio desejar.",
+        "ingredients": [{"name": "Pão de ló de nozes", "percentage": "30"}, {"name": "Calda", "percentage": "15"}, {"name": "Recheio de baba de moça", "percentage": "30"}, {"name": "Chantilly", "percentage": "25"}],
+        "method": ["Montagem do bolo:", "massa de pão de ló;", "umedecer com calda;", "distribuir o recheio de baba de moça;", "outra massa de pão de ló;", "cobrir com chantilly;", "decorar."]
+    },
+    "bolo_diplomata": {
+        "name": "Bolo diplomata",
+        "category": "Bolos",
+        "icon": "fa-solid fa-utensils",
+        "description": "Podem ser feitas quantas camadas de pão de ló e recheio desejar.",
+        "ingredients": [{"name": "Pão de ló", "percentage": "22"}, {"name": "Massa folhada", "percentage": "12"}, {"name": "Creme baunilha", "percentage": "33"}, {"name": "Calda para umedecer bolo", "percentage": "10"}, {"name": "Açúcar de confeiteiro", "percentage": "8"}, {"name": "Farelo de massa folhada", "percentage": "15"}],
+        "method": ["Montagem do bolo:", "placa de pão de ló umedecida com calda;", "creme baunilha;", "placa de massa folhada;", "creme baunilha;", "placa de pão de ló umedecida com calda;", "aplicar uma camada de creme baunilha ou chantilly nas laterais e superfície do bolo;", "aplicar farelos de massa folhada nas laterais e na superfície do bolo;", "polvilhar com açúcar de confeiteiro a superfície do bolo."]
+    },
+    "floresta_negra": {
+        "name": "Floresta negra",
+        "category": "Bolos",
+        "icon": "fa-solid fa-utensils",
+        "description": "No bolo floresta branca é utilizado o pão de ló neutro e raspas de chocolate branco. Podem ser feitas quantas camadas de pão de ló e recheio desejar.",
+        "ingredients": [{"name": "Pão de ló de chocolate", "percentage": "35"}, {"name": "Calda", "percentage": "12"}, {"name": "Recheio de cereja", "percentage": "25"}, {"name": "Chantilly (cobertura)", "percentage": "16"}, {"name": "Raspas de chocolate", "percentage": "10"}, {"name": "Cerejas para decoração", "percentage": "2"}],
+        "method": ["Montagem do bolo:", "pão de ló de chocolate;", "umedecer com calda;", "recheio;", "pão de ló de chocolate;", "cobertura;", "decorar com raspas de chocolate e cerejas;", "polvilhar com açúcar de confeiteiro."]
+    },
+    "rocambole": {
+        "name": "Rocambole",
+        "category": "Bolos",
+        "icon": "fa-solid fa-utensils",
+        "description": "Pode ser recheado com goiabada, geleia de frutas, doce de leite entre outros.",
+        "ingredients": [{"name": "Ovos", "percentage": "52,4"}, {"name": "Açúcar", "percentage": "23,6"}, {"name": "Farinha de trigo", "percentage": "23,5"}, {"name": "Essência", "percentage": "0,5"}],
+        "method": ["Bater ovos e açúcar em 3ª velocidade com batedor globo até dobrar de volume.", "Juntar a farinha (peneirada) ao creme mexendo levemente.", "Colocar em assadeira forrada com papel manteiga.", "Assar a 200ºC por aproximadamente 10 minutos.", "Retirar do forno e enrolar o rocambole com o próprio papel manteiga.", "Esfriar.", "Desenrolar o rocambole.", "Rechear com creme de nozes.", "Enrolar novamente.", "Decorar a gosto."]
+    },
+    "tradicional": {
+        "name": "Mousse de chocolate tradicional",
+        "category": "Sobremesas Geladas",
+        "icon": "fa-solid fa-utensils",
+        "description": "",
+        "ingredients": [{"name": "Chocolate meio amargo", "percentage": "30"}, {"name": "Creme de leite", "percentage": "30"}, {"name": "Açúcar refinado", "percentage": "13"}, {"name": "Gemas", "percentage": "11,8"}, {"name": "Claras", "percentage": "9"}, {"name": "Água", "percentage": "5"}, {"name": "Gelatina sem sabor", "percentage": "0,6"}, {"name": "Rum", "percentage": "0,3"}, {"name": "Essência de baunilha", "percentage": "0,3"}],
+        "method": ["Bater as gemas com metade do açúcar e o rum até formar uma gemada.", "Reservar.", "Derreter o chocolate e agregar o creme de leite.", "Bater as claras em neve com o restante do açúcar.", "Agregar aos poucos as claras em neve com o creme de chocolate, alternando com a gemada, misturando levemente.", "Montar em taças, levar para gelar e dar acabamento final."]
+    },
+    "mousse_de_coco": {
+        "name": "Mousse de coco",
+        "category": "Sobremesas Geladas",
+        "icon": "fa-solid fa-utensils",
+        "description": "Pode ser decorado com bombom prestigio.",
+        "ingredients": [{"name": "Mousse: Creme de leite", "percentage": "35"}, {"name": "Mousse: Leite de coco", "percentage": "23,5"}, {"name": "Mousse: Açúcar refinado", "percentage": "20"}, {"name": "Mousse: Claras", "percentage": "14"}, {"name": "Mousse: Água", "percentage": "6"}, {"name": "Mousse: Gelatina sem sabor", "percentage": "1,5"}, {"name": "Cobertura: Coco ralado grosso", "percentage": "76,9"}, {"name": "Cobertura: Açúcar refinado", "percentage": "23,1"}],
+        "method": ["Mousse:", "Bater as claras com o açúcar e reservar.", "Bater no liquidificador: creme de leite, leite de coco e a gelatina hidratada e derretida.", "Colocar aos poucos o líquido sobre as claras batidas e misturar levemente.", "Cobertura:", "Misturar os ingredientes.", "Levar ao fogo mexendo sempre até caramelizar."]
+    },
+    "tortas_geladas": {
+        "name": "Tortas geladas",
+        "category": "Sobremesas Geladas",
+        "icon": "fa-solid fa-utensils",
+        "description": "Opções de montagem da torta: cortar uma base com o aro no pão de ló, utilizar como fundo do aro; untar o aro com margarina e açúcar ou utilizar acetato; as laterais do aro podem ser forradas com placas de rocambole; rechear com a (s) mousse (s) desejada; gelar; dar acabamento final.",
+        "ingredients": [{"name": "Mousse de maracujá: Leite condensado", "percentage": "33"}, {"name": "Mousse de maracujá: Suco de maracujá", "percentage": "24,6"}, {"name": "Mousse de maracujá: Creme de leite", "percentage": "24,6"}, {"name": "Mousse de maracujá: Gelatina em pó sem sabor", "percentage": "1,3"}, {"name": "Mousse de maracujá: Chantilly", "percentage": "10"}, {"name": "Mousse de maracujá: Água", "percentage": "6,5"}, {"name": "Mousse de chocolate: Chocolate meio amargo", "percentage": "41,6"}, {"name": "Mousse de chocolate: Creme de leite", "percentage": "28"}, {"name": "Mousse de chocolate: Chantilly", "percentage": "28"}, {"name": "Mousse de chocolate: Rum", "percentage": "2"}, {"name": "Mousse de chocolate: Essência de baunilha", "percentage": "0,4"}],
+        "method": ["Mousse de maracujá:", "dissolver a gelatina em banho maria e reservar;", "bater os três primeiros ingredientes no liquidificador, juntar à gelatina e deixar adquirir consistência.", "Mousse de chocolate:", "derreter o chocolate e acrescentar o creme de leite;", "no chantilly batido adicionar o rum e a essência;", "misturar no chocolate derretido."]
+    },
+    "torta_holandesa": {
+        "name": "Torta holandesa",
+        "category": "Sobremesas Geladas",
+        "icon": "fa-solid fa-utensils",
+        "description": "O creme de leite deve ser utilizado gelado e sem soro. O biscoito pode ser o tipo maria ou maisena.",
+        "ingredients": [{"name": "Creme holandês: Creme de leite", "percentage": "27"}, {"name": "Creme holandês: Açúcar de confeiteiro", "percentage": "13,8"}, {"name": "Creme holandês: Manteiga sem sal", "percentage": "13,8"}, {"name": "Creme holandês: Essência de baunilha", "percentage": "0,2"}, {"name": "Creme holandês: Rum", "percentage": "1,4"}, {"name": "Creme holandês: Gemas", "percentage": "3,6"}, {"name": "Creme holandês: Essência de rum", "percentage": "0,2"}, {"name": "Cobertura: Chocolate meio amargo", "percentage": "9,3"}, {"name": "Cobertura: Leite líquido", "percentage": "9,3"}, {"name": "Cobertura: Açúcar refinado", "percentage": "5,4"}, {"name": "Cobertura: Manteiga sem sal", "percentage": "2,3"}, {"name": "Cobertura: Chocolate em pó", "percentage": "1,4"}, {"name": "Cobertura: Rum", "percentage": "0,3"}, {"name": "Base: Biscoito", "percentage": "12"}, {"name": "Decoração: biscoitos cobertos com chocolate.", "percentage": ""}],
+        "method": ["Creme holandês:", "bater açúcar com a manteiga por aproximadamente 10 minutos;", "agregar o restante dos ingredientes misturando delicadamente.", "Cobertura:", "levar ao fogo brando todos os ingredientes exceto o rum, deixar ferver até obter uma calda grossa;", "retirar do fogo e acrescentar o rum;", "montar a torta em aro utilizando os biscoitos e o creme, levar para gelar por cerca de 30 minutos no freezer ou 12 horas na geladeira;", "dar acabamento final.", "Base:", "forrar o fundo da forma com os biscoitos, banhados no soro do creme de leite.", "Decoração:", "aplicar na lateral os biscoitos cobertos com chocolate."]
+    },
+    "creme_baunilha": {
+        "name": "Creme baunilha",
+        "category": "Cremes e Recheios",
+        "icon": "fa-solid fa-utensils",
+        "description": "Para creme de chocolate, aacrescentar ao creme ainda quente, chocolate meio amargo picado. Normalmente a essência é de baunilha mas pode ser utilizada os mais variados sabores.",
+        "ingredients": [{"name": "Leite líquido", "percentage": "65,1"}, {"name": "Açúcar", "percentage": "19,5"}, {"name": "Amido de milho", "percentage": "5,2"}, {"name": "Gemas", "percentage": "6,5"}, {"name": "Margarina", "percentage": "3,3"}, {"name": "Essência", "percentage": "0,4"}],
+        "method": ["Misturar o amido e as gemas em parte do leite e reservar.", "Ferver o restante do leite com o açúcar e a gordura.", "Baixar o fogo e misturar o leite reservado mexendo sempre até engrossar.", "Esfriar o creme e adicionar a essência."]
+    },
+    "creme_com_leite_condensado": {
+        "name": "Creme com leite condensado",
+        "category": "Cremes e Recheios",
+        "icon": "fa-solid fa-utensils",
+        "description": "",
+        "ingredients": [{"name": "Leite líquido", "percentage": "51"}, {"name": "Leite condensado", "percentage": "36"}, {"name": "Gemas", "percentage": "5,0"}, {"name": "Amido de milho", "percentage": "5,0"}, {"name": "Margarina", "percentage": "2,5"}, {"name": "Essência", "percentage": "0,5"}],
+        "method": ["Peneirar as gemas.", "Dissolver o amido em metade do leite e acrescentar as gemas.", "Reservar.", "Misturar o restante do leite com margarina, leite condensado.", "Levar ao fogo brando, deixar levantar fervura e acrescentar a mistura reservada, mexendo com auxilio do fuê até engrossar."]
+    },
+    "creme_de_nozes": {
+        "name": "Creme de nozes",
+        "category": "Cremes e Recheios",
+        "icon": "fa-solid fa-utensils",
+        "description": "",
+        "ingredients": [{"name": "Leite condensado", "percentage": "65,5"}, {"name": "Creme de leite", "percentage": "17"}, {"name": "Nozes trituradas", "percentage": "11,3"}, {"name": "Chocolates em pó", "percentage": "2,6"}, {"name": "Farinha de trigo", "percentage": "2,3"}, {"name": "Margarina", "percentage": "1,3"}],
+        "method": ["Misturar o leite condensado com a farinha mexendo bem para dissolver.", "Agregar os outros ingredientes à mistura e levar ao fogo brando, mexendo com auxilio do fuê até engrossar."]
+    },
+    "creme_de_limão": {
+        "name": "Creme de limão",
+        "category": "Cremes e Recheios",
+        "icon": "fa-solid fa-utensils",
+        "description": "",
+        "ingredients": [{"name": "Leite condensado", "percentage": "44"}, {"name": "Creme de leite", "percentage": "33"}, {"name": "Suco de limão", "percentage": "16,5"}, {"name": "Água", "percentage": "5,5"}, {"name": "Gelatina sem sabor", "percentage": "1"}],
+        "method": ["Hidratar e derreter a gelatina e reservar.", "Misture todos os ingredientes com o fuê e adicione a gelatina."]
+    },
+    "creme_paris": {
+        "name": "Creme paris",
+        "category": "Cremes e Recheios",
+        "icon": "fa-solid fa-utensils",
+        "description": "",
+        "ingredients": [{"name": "Chocolate meio amargo", "percentage": "53,5"}, {"name": "Creme de leite", "percentage": "44,4"}, {"name": "Glucose/margarina", "percentage": "2,1"}],
+        "method": ["Derreter o chocolate.", "Aquecer o creme de leite sem ferver.", "Misturar até ficar homogêneo.", "Empregar."]
+    },
+    "creme_para_confeitar": {
+        "name": "Creme para confeitar",
+        "category": "Cremes e Recheios",
+        "icon": "fa-solid fa-utensils",
+        "description": "",
+        "ingredients": [{"name": "Açúcar de confeiteiro", "percentage": "67,1"}, {"name": "Clara pasteurizada", "percentage": "26,8"}, {"name": "Emulsificante", "percentage": "5,4"}, {"name": "Essência", "percentage": "0,7"}],
+        "method": ["Misturar tudo.", "Levar todos os ingredientes para a batedeira e bater em 3ª velocidade até formar picos."]
+    },
+    "merengue_italiano": {
+        "name": "Merengue italiano",
+        "category": "Cremes e Recheios",
+        "icon": "fa-solid fa-utensils",
+        "description": "Pode ser assado.",
+        "ingredients": [{"name": "Açúcar", "percentage": "53"}, {"name": "Claras", "percentage": "14,8"}, {"name": "Água", "percentage": "31,7"}, {"name": "Essência", "percentage": "0,5"}],
+        "method": ["Fazer calda em ponto de voo com água e açúcar.", "Bater as claras em 3ª velocidade com o batedor globo até o ponto de merengue.", "Agregar a calda ao merengue e bater em 2ª velocidade até esfriar.", "Aplicar como cobertura e decoração."]
+    },
+    "fios_de_ovos": {
+        "name": "Fios de ovos",
+        "category": "Doces Tradicionais",
+        "icon": "fa-solid fa-utensils",
+        "description": "Para aromatizar a calda usar cravo em flor e canela em pau.",
+        "ingredients": [{"name": "Calda: Açúcar", "percentage": "70,7"}, {"name": "Calda: Água", "percentage": "24,7"}, {"name": "Calda: Essência", "percentage": "0,4"}, {"name": "Calda: Margarina", "percentage": "1,4"}, {"name": "Calda: Vinagre", "percentage": "2,8"}, {"name": "Gemas", "percentage": "20"}],
+        "method": ["Fazer a calda em ponto de fio fino com água e açúcar.", "Peneirar as gemas e reservar.", "Colocar as gemas no funil.", "Sobre a espuma da calda, despejar as gemas em movimentos circulares e lentos.", "Aguardar o cozimento dos fios.", "Retirar os fios da calda com escumadeira.", "Passar em água gelada e escorrer sobre peneira.", "Esfriar e guardar em geladeira ou congelar imersa em calda fria."]
+    },
+    "baba_de_moça": {
+        "name": "Baba de moça",
+        "category": "Cremes e Recheios",
+        "icon": "fa-solid fa-utensils",
+        "description": "Cravo e canela a gosto.",
+        "ingredients": [{"name": "Açúcar refinado", "percentage": "28.5"}, {"name": "Água", "percentage": "22.5"}, {"name": "Amido de milho", "percentage": "4.0"}, {"name": "Gema", "percentage": "22.5"}, {"name": "Leite de coco", "percentage": "22.5"}],
+        "method": ["Fazer uma calda ponto de fio fraco com água, açúcar, cravo e canela.", "Deixar esfriar.", "Adicione gema com leite de coco e amido peneirados à calda já fria.", "Leve ao fogo, mexendo sempre, até engrossar."]
+    },
+    "recheio_trufado_de_café": {
+        "name": "Recheio trufado de café",
+        "category": "Cremes e Recheios",
+        "icon": "fa-solid fa-utensils",
+        "description": "",
+        "ingredients": [{"name": "Chocolate ao leite", "percentage": "26.0"}, {"name": "Chocolate meio amargo", "percentage": "26.0"}, {"name": "Creme de leite", "percentage": "21.0"}, {"name": "Chantilly", "percentage": "21.0"}, {"name": "Mel", "percentage": "4.0"}, {"name": "Licor de cacau", "percentage": "1.5"}, {"name": "Café solúvel", "percentage": "0.5"}],
+        "method": ["Derreter os chocolates, agregar o creme de leite, mel, licor e o café, misturar bem até obter uma homogeneização dos ingredientes.", "Agregar o chantilly à mistura suavemente, com o auxílio do fuê."]
+    },
+    "brigadeiro": {
+        "name": "Brigadeiro",
+        "category": "Cremes e Recheios",
+        "icon": "fa-solid fa-utensils",
+        "description": "Podem ser utilizados na montagem do bolo brigadeiro.",
+        "ingredients": [{"name": "Leite condensado (para recheio)", "percentage": "43.0"}, {"name": "Leite líquido", "percentage": "17.0"}, {"name": "Creme de leite (para recheio)", "percentage": "17.0"}, {"name": "Chocolate meio amargo", "percentage": "17.5"}, {"name": "Margarina (para recheio)", "percentage": "3.4"}, {"name": "Farinha de trigo (para recheio)", "percentage": "2.1"}, {"name": "Leite condensado (para decoração)", "percentage": "69.6"}, {"name": "Creme de leite (para decoração)", "percentage": "17.4"}, {"name": "Chocolate em pó", "percentage": "8.7"}, {"name": "Farinha de trigo (para decoração)", "percentage": "2.6"}, {"name": "Margarina (para decoração)", "percentage": "1.7"}, {"name": "Chocolate granulado", "percentage": "q.b."}],
+        "method": ["Recheio e cobertura:", "Misturar o leite condensado com a farinha, mexendo bem para dissolver.", "Agregar os outros ingredientes à mistura.", "Levar ao fogo brando, mexendo até engrossar.", "Decoração:", "Misturar leite condensado, chocolate em pó, farinha de trigo e a margarina.", "Adicionar o creme de leite.", "Levar ao fogo brando, mexendo até engrossar.", "Esfriar.", "Enrolar.", "Passar no chocolate granulado."]
+    },
+    "recheio_de_coco": {
+        "name": "Recheio de coco",
+        "category": "Cremes e Recheios",
+        "icon": "fa-solid fa-utensils",
+        "description": "O creme de baunilha deve estar pronto e frio. Pode se adicionar essência de coco ou rum. Aplicar no bolo prestígio.",
+        "ingredients": [{"name": "Creme de baunilha", "percentage": "53.0"}, {"name": "Coco ralado fino", "percentage": "17.0"}, {"name": "Leite de coco", "percentage": "13.0"}, {"name": "Leite condensado", "percentage": "17.0"}],
+        "method": ["Misturar todos os ingredientes.", "Aplicar."]
+    },
+    "recheio_de_cereja": {
+        "name": "Recheio de cereja",
+        "category": "Cremes e Recheios",
+        "icon": "fa-solid fa-utensils",
+        "description": "Aplicar no bolo floresta negra.",
+        "ingredients": [{"name": "Cerejas picadas", "percentage": "55.0"}, {"name": "Chantilly", "percentage": "45.0"}],
+        "method": ["Misturar todos os ingredientes.", "Aplicar."]
+    },
+    "geleia_de_brilho": {
+        "name": "Geleia de brilho",
+        "category": "Caldas e Coberturas",
+        "icon": "fa-solid fa-utensils",
+        "description": "Pode utilizar corantes.",
+        "ingredients": [{"name": "Água", "percentage": "63.0"}, {"name": "Açúcar", "percentage": "31.0"}, {"name": "Polvilho doce", "percentage": "1.2"}, {"name": "Amido de milho", "percentage": "4.5"}, {"name": "Essência", "percentage": "0.3"}],
+        "method": ["Pesar os ingredientes;", "misturar o amido e o polvilho em pequena porção da água pesada, reservar;", "levar ao fogo o restante da água e o açúcar até ferver;", "acrescentar a mistura reservada;", "cozinhar por aproximadamente 3 minutos;", "esfriar;", "adicionar a essência;", "empregar."]
+    },
+    "geleia_de_brilho_de_maracujá": {
+        "name": "Geleia de brilho de maracujá",
+        "category": "Caldas e Coberturas",
+        "icon": "fa-solid fa-utensils",
+        "description": "Pode substituir a polpa por outros sabores.",
+        "ingredients": [{"name": "Água", "percentage": "35.0"}, {"name": "Açúcar", "percentage": "14.5"}, {"name": "Polpa de maracujá", "percentage": "42.5"}, {"name": "Amido de milho", "percentage": "3.0"}, {"name": "Glucose", "percentage": "5.0"}],
+        "method": ["Misturar todos os ingredientes.", "Levar ao fogo até engrossar.", "Aplicar."]
+    },
+    "ricota": {
+        "name": "Ricota",
+        "category": "Preparações Base",
+        "icon": "fa-solid fa-utensils",
+        "description": "Receita para o preparo da ricota.",
+        "ingredients": [{"name": "Leite líquido", "percentage": "95.2"}, {"name": "Vinagre branco", "percentage": "4.8"}],
+        "method": ["Amornar o leite até 60°C.", "Adicionar o vinagre e mexer.", "Esperar talhar.", "Coar em pano sem espremer.", "Usar frio."]
+    },
+    "pudim": {
+        "name": "Calda de caramelo para pudim",
+        "category": "Caldas e Coberturas",
+        "icon": "fa-solid fa-utensils",
+        "description": "Limpar sempre a lateral interna da panela com pincel e água para não cristalizar a calda. Não mexer durante a fervura. Acrescentar a água adicional com cuidado para não respingar. Caso não tenha a glicose, utilizar vinagre na mesma porcentagem.",
+        "ingredients": [{"name": "Açúcar", "percentage": "60.0"}, {"name": "Água", "percentage": "15.0"}, {"name": "Glicose", "percentage": "1.0"}, {"name": "Água adicional", "percentage": "24.0"}],
+        "method": ["Levar em fogo os três primeiros ingredientes e ferver até o ponto de caramelo.", "Acrescentar a água adicional e ferver até dissolver o caramelo."]
+    },
+    "calda_para_umedecer_bolos_i": {
+        "name": "Calda para umedecer bolos I",
+        "category": "Caldas e Coberturas",
+        "icon": "fa-solid fa-utensils",
+        "description": "Pode-se acrescentar maçã picada, casca de laranja e casca de limão a gosto.",
+        "ingredients": [{"name": "Água", "percentage": "76.0"}, {"name": "Açúcar", "percentage": "22.0"}, {"name": "Canela em pau", "percentage": "0.3"}, {"name": "Cravo", "percentage": "0.2"}, {"name": "Rum", "percentage": "1.5"}],
+        "method": ["Misturar todos os ingredientes, menos o rum.", "Ferver.", "Após resfriamento, adicionar o rum."]
+    },
+    "calda_para_umedecer_bolos_ii": {
+        "name": "Calda para umedecer bolos II",
+        "category": "Caldas e Coberturas",
+        "icon": "fa-solid fa-utensils",
+        "description": "Pode ser aplicado no bolo prestígio.",
+        "ingredients": [{"name": "Leite condensado", "percentage": "16.0"}, {"name": "Leite de coco", "percentage": "31.0"}, {"name": "Leite", "percentage": "47.0"}, {"name": "Rum", "percentage": "1.5"}],
+        "method": ["Misturar todos os ingredientes."]
+    },
+    "calda_para_umedecer_bolos_iii": {
+        "name": "Calda para umedecer bolos III",
+        "category": "Caldas e Coberturas",
+        "icon": "fa-solid fa-utensils",
+        "description": "Pode ser aplicado no bolo floreta negra.",
+        "ingredients": [{"name": "Leite condensado", "percentage": "38.0"}, {"name": "Leite", "percentage": "57.0"}, {"name": "Rum ou licor de marrasquino", "percentage": "5.0"}],
+        "method": ["Misturar todos os ingredientes."]
+    },
+    "calda_para_empanar": {
+        "name": "Calda para empanar",
+        "category": "Salgados",
+        "icon": "fa-solid fa-utensils",
+        "description": "Empanar na farinha de rosca.",
+        "ingredients": [{"name": "Água", "percentage": "90.1"}, {"name": "Farinha de trigo", "percentage": "9.0"}, {"name": "Sal", "percentage": "0.9"}],
+        "method": ["Misturar todos os ingredientes.", "Banhar os salgados."]
+    },
+    "recheio_de_palmito": {
+        "name": "Recheio de palmito",
+        "category": "Salgados",
+        "icon": "fa-solid fa-utensils",
+        "description": "Pode-se substituir o creme de leite por molho de tomate. Pode-se substituir o palmito por outros ingredientes, como camarão ou frango desfiado.",
+        "ingredients": [{"name": "Palmito", "percentage": "34.0"}, {"name": "Ervilha", "percentage": "8.5"}, {"name": "Cebola", "percentage": "12.8"}, {"name": "Salsinha", "percentage": "1.7"}, {"name": "Óleo ou azeite", "percentage": "3.4"}, {"name": "Tomates sem sementes", "percentage": "14.9"}, {"name": "Agua", "percentage": "8.5"}, {"name": "Sal", "percentage": "0.7"}, {"name": "Creme de leite", "percentage": "10.0"}, {"name": "Azeitonas", "percentage": "4.0"}, {"name": "Farinha de trigo", "percentage": "1.5"}],
+        "method": ["Refogar a cebola no óleo.", "Acrescentar o tomate, palmito e ervilha.", "Adicionar a água, farinha, creme de leite e sal.", "Tirar do fogo e acrescentar a salsinha e a azeitona."]
+    },
+    "recheio_de_frango": {
+        "name": "Recheio de frango",
+        "category": "Salgados",
+        "icon": "fa-solid fa-utensils",
+        "description": "Pode-se adicionar creme de leite ou requeijão cremoso. Cozinhar o frango em água, cebola, talos da salsinha e caldo de galinha.",
+        "ingredients": [{"name": "Frango desfiado", "percentage": "58.8"}, {"name": "Cebola", "percentage": "13.7"}, {"name": "Tomates sem semente", "percentage": "19.6"}, {"name": "Óleo ou azeite", "percentage": "3.9"}, {"name": "Salsinha fresca", "percentage": "3.1"}, {"name": "Coloral", "percentage": "0.8"}, {"name": "Sal (se necessário)", "percentage": "a.g."}],
+        "method": ["Refogar a cebola no óleo.", "Acrescentar o restante.", "Aplicar na coxinha o recheio frio."]
+    },
+    "recheio_de_carne_moída": {
+        "name": "Recheio de carne moída",
+        "category": "Salgados",
+        "icon": "fa-solid fa-utensils",
+        "description": "Pode-se adicionar pimenta do reino, noz moscada, canela e cravo em pó a gosto. O recheio também pode ser refogado.",
+        "ingredients": [{"name": "Carne moída", "percentage": "55.4"}, {"name": "Cebola", "percentage": "12.9"}, {"name": "Tomates sem semente", "percentage": "18.5"}, {"name": "Tahine", "percentage": "3.7"}, {"name": "Sal", "percentage": "1.1"}, {"name": "Salsinha fresca", "percentage": "3.0"}, {"name": "Suco de limão", "percentage": "5.5"}],
+        "method": ["Misturar os ingredientes.", "Descansar.", "Escorrer sobre uma peneira.", "Aplicar."]
+    }
+}

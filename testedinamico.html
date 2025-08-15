@@ -1,0 +1,235 @@
+
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delícias da Cozinha - Suas Receitas Favoritas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Adicionando Font Awesome para os ícones das receitas -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Definindo a nova paleta de cores como variáveis CSS */
+        :root {
+            --color-primary: #D9A679;
+            --color-primary-dark: #8C6B4F;
+            --color-title: #260B01;
+            --color-background-soft: #D9CEC1;
+            --color-accent: #593312;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body class="bg-[var(--color-title)] text-[var(--color-background-soft)]">
+
+    <!-- Cabeçalho -->
+    <header class="bg-[var(--color-title)]/70 backdrop-blur-sm shadow-lg sticky top-0 z-10">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-[var(--color-primary)]">
+                <a href="#">Delícias da Cozinha</a>
+            </div>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#populares" class="text-[var(--color-accent)] hover:text-[var(--color-primary)]">Populares</a>
+                <a href="#categorias" class="text-[var(--color-accent)] hover:text-[var(--color-primary)]">Categorias</a>
+                <a href="#" class="bg-[var(--color-primary)] text-white px-4 py-2 rounded-full hover:bg-[var(--color-primary-dark)] transition-colors">Enviar Receita</a>
+            </div>
+            <div class="md:hidden">
+                <button class="text-[var(--color-accent)] hover:text-[var(--color-primary)]">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Seção 1: Apresentação e Dropdown -->
+        <section class="text-center py-16">
+            <h1 class="text-5xl md:text-6xl font-bold text-[var(--color-background-soft)] mb-4">O Sabor Encontra a Tradição</h1>
+            <p class="text-lg text-[var(--color-accent)] max-w-3xl mx-auto mb-8">
+                Bem-vindo ao Delícias da Cozinha! Aqui, compartilhamos receitas incríveis para todos os momentos. Explore nossos pratos, descubra novos sabores e inspire-se para cozinhar.
+            </p>
+            <div class="relative inline-block max-w-sm w-full">
+                <select id="recipes-dropdown" class="w-full appearance-none bg-[var(--color-accent)]/30 border border-[var(--color-primary-dark)] text-[var(--color-background-soft)] py-3 px-4 pr-8 rounded-full leading-tight focus:outline-none focus:bg-[var(--color-accent)]/50 focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary-dark)] transition">
+                    <option value="">Navegue por todas as receitas...</option>
+                    <!-- Opções do dropdown serão populadas via JavaScript -->
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-[var(--color-accent)]">
+                    <i data-lucide="chevron-down" class="h-5 w-5"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 2: Receitas Mais Acessadas -->
+        <section id="populares" class="py-16">
+            <h2 class="text-4xl font-bold text-center text-[var(--color-background-soft)] mb-12">Receitas Populares</h2>
+            <div id="popular-recipes-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Cards de receita serão populados via JavaScript -->
+                 <p class="text-center col-span-full">Carregando receitas...</p>
+            </div>
+        </section>
+
+        <!-- Seção 3: Todas as Categorias -->
+        <section id="categorias" class="py-16 bg-[var(--color-title)]/60 rounded-2xl">
+            <h2 class="text-4xl font-bold text-center text-[var(--color-background-soft)] mb-12">Explore por Categoria</h2>
+            <div id="categories-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <!-- Cards de categoria serão populados via JavaScript -->
+                <p class="text-center col-span-full">Carregando categorias...</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-[var(--color-title)]/80 text-[var(--color-background-soft)] mt-16">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; 2024 Delícias da Cozinha. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          // IMPORTANTE: Altere 'recipe.html' se o nome do seu arquivo de receita for diferente.
+          const RECIPE_PAGE_URL = 'receita.html';
+
+          const dropdown = document.getElementById('recipes-dropdown');
+          const popularGrid = document.getElementById('popular-recipes-grid');
+          const categoriesGrid = document.getElementById('categories-grid');
+
+          async function loadRecipes() {
+              try {
+                  const response = await fetch('receitas.json');
+                  if (!response.ok) {
+                      throw new Error('Falha ao carregar o arquivo recipes.json');
+                  }
+                  const recipes = await response.json();
+
+                  populateDropdown(recipes);
+                  populatePopularRecipes(recipes);
+                  populateCategories(recipes);
+
+              } catch (error) {
+                  console.error('Erro ao carregar receitas:', error);
+                  popularGrid.innerHTML = '<p class="text-center col-span-full text-red-500">Não foi possível carregar as receitas.</p>';
+                  categoriesGrid.innerHTML = '<p class="text-center col-span-full text-red-500">Não foi possível carregar as categorias.</p>';
+              }
+          }
+
+          function populateDropdown(recipes) {
+              for (const key in recipes) {
+                  const recipe = recipes[key];
+                  const option = document.createElement('option');
+                  option.value = key;
+                  option.textContent = recipe.name;
+                  dropdown.appendChild(option);
+              }
+
+              dropdown.addEventListener('change', (event) => {
+                  const selectedKey = event.target.value;
+                  if (selectedKey) {
+                      window.location.href = `${RECIPE_PAGE_URL}?recipe=${selectedKey}`;
+                  }
+              });
+          }
+
+          function populatePopularRecipes(recipes) {
+              popularGrid.innerHTML = ''; // Limpa o conteúdo estático
+              const recipeKeys = Object.keys(recipes);
+
+              // Embaralha o array de chaves para sortear as receitas
+              for (let i = recipeKeys.length - 1; i > 0; i--) {
+                  const j = Math.floor(Math.random() * (i + 1));
+                  [recipeKeys[i], recipeKeys[j]] = [recipeKeys[j], recipeKeys[i]];
+              }
+
+              // Pega as primeiras 4 receitas sorteadas como "populares"
+              const popularKeys = recipeKeys.slice(0, 4);
+
+              if (popularKeys.length === 0) {
+                  popularGrid.innerHTML = '<p class="text-center col-span-full">Nenhuma receita popular encontrada.</p>';
+                  return;
+              }
+
+              popularKeys.forEach(key => {
+                  const recipe = recipes[key];
+                  const card = document.createElement('a');
+                  console.log(recipes)
+                  card.href = `${RECIPE_PAGE_URL}?recipe=${key}`;
+                  card.className = "block bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300";
+                  card.innerHTML = `
+                      <div class="w-full h-48 bg-amber-100 flex items-center justify-center">
+                          <i class="fa-solid fa-${recipe.icon} text-6xl text-amber-600"></i>
+                      </div>
+                      <div class="p-6">
+                          <h3 class="text-2xl font-bold mb-2">${recipe.name}</h3>
+                          <div class="flex items-center text-sm text-gray-500">
+                              <i data-lucide="tag" class="w-4 h-4 mr-2 text-amber-500"></i>
+                              <span>${recipe.category}</span>
+                          </div>
+                      </div>
+                  `;
+                  popularGrid.appendChild(card);
+              });
+          
+          }
+
+          function populateCategories(recipes) {
+              categoriesGrid.innerHTML = ''; // Limpa o conteúdo estático
+              const categories = new Set();
+              for (const key in recipes) {
+                  categories.add(recipes[key].category);
+              }
+
+              if (categories.size === 0) {
+                  categoriesGrid.innerHTML = '<p class="text-center col-span-full">Nenhuma categoria encontrada.</p>';
+                  return;
+              }
+
+              // Mapeamento de categorias para ícones
+              const categoryIcons = {
+                  'Bolos': 'cake-slice',
+                  'Bombons e Trufas': 'heart',
+                  'Biscoitos e Petit Fours': 'cookie',
+                  'Caldas e Coberturas': 'utensils-crossed',
+                  'Cremes e Recheios': 'soup',
+                  'Doces Tradicionais': 'candy',
+                  'Massas Base': 'egg',
+                  'Montagem e Decoração': 'sparkles',
+                  'Preparações Base': 'chef-hat',
+                  'Pudins e Flans': 'circle-dot',
+                  'Pães e Massas Doces': 'croissant',
+                  'Salgados': 'pizza',
+                  'Sobremesas Geladas': 'snowflake',
+                  'Tortas': 'pie-chart',
+                  'default': 'utensils-crossed'
+              };
+
+              categories.forEach(category => {
+                  const iconName = categoryIcons[category] || categoryIcons['default'];
+                  const card = document.createElement('a');
+                  card.href = "#populares"; // Link de exemplo
+                  card.className = "block bg-white p-6 rounded-xl text-center shadow-md hover:shadow-xl hover:bg-amber-100 transition-all duration-300";
+                  card.innerHTML = `
+                      <i data-lucide="${iconName}" class="w-12 h-12 mx-auto text-amber-600 mb-4"></i>
+                      <h3 class="font-semibold text-lg">${category}</h3>
+                  `;
+                  categoriesGrid.appendChild(card);
+              });
+          }
+
+          loadRecipes().then(() => {
+              lucide.createIcons(); // Reinicializa os ícones após adicionar conteúdo dinâmico
+          });
+      });
+    </script>
+  </body>
+</html>
