@@ -3,7 +3,7 @@
         "name": "Pudim de leite",
         "category": "Pudins e Flans",
         "icon": "fa-solid fa-utensils",
-        "image": "https://raw.githubusercontent.com/munizbruna/confeitaria/50b77e863fb2919a9f585ff7e0944e5b617db4c3/images/pudim_de_leite.jpg",
+        "image": "https://raw.githubusercontent.com/munizbruna/confeitaria/refs/heads/master/images/pudim_de_leite.jpg",
         "description": "",
         "ingredients": [{"name": "Leite condensado", "percentage": "46,9"}, {"name": "Leite líquido", "percentage": "35,2"}, {"name": "Ovos", "percentage": "17,8"}],
         "method": ["Bater todos os ingredientes no liquidificador.", "Colocar em fôrma untada e caramelizada.", "Assar em banho-maria."]
@@ -12,7 +12,7 @@
         "name": "Pudim de coco",
         "category": "Pudins e Flans",
         "icon": "fa-solid fa-utensils",
-        "image": "https://raw.githubusercontent.com/munizbruna/confeitaria/50b77e863fb2919a9f585ff7e0944e5b617db4c3/images/pudimcoco.jpg",
+        "image": "https://raw.githubusercontent.com/munizbruna/confeitaria/refs/heads/master/images/pudimcoco.jpg",
         "description": "Para haver uma separação entre o pudim e o coco, após verter na forma deixar descansar aproximadamente 10 minutos antes de levar ao forno.",
         "ingredients": [{"name": "Leite condensado", "percentage": "36,6"}, {"name": "Leite líquido", "percentage": "22,0"}, {"name": "Leite de coco", "percentage": "23,1"}, {"name": "Ovos", "percentage": "12,8"}, {"name": "Coco seco ralado", "percentage": "5,5"}],
         "method": ["Bater todos os ingredientes no liquidificador.", "Colocar em fôrma untada e caramelizada.", "Assar em banho-maria."]
@@ -21,7 +21,7 @@
         "name": "Pudim de pão",
         "category": "Pudins e Flans",
         "icon": "fa-solid fa-utensils",
-        "image": "https://raw.githubusercontent.com/munizbruna/confeitaria/50b77e863fb2919a9f585ff7e0944e5b617db4c3/images/pudimcoco.jpg",
+        "image": "https://raw.githubusercontent.com/munizbruna/confeitaria/refs/heads/master/images/pudimcoco.jpg",
         "description": "Podem-se acrescentar ameixas secas picadas, frutas cristalizadas, uva passa. Pode-se acrescentar canela em pó em até 0,3%.",
         "ingredients": [{"name": "Leite líquido", "percentage": "44,6"}, {"name": "Pão", "percentage": "13,4"}, {"name": "Açúcar", "percentage": "24,1"}, {"name": "Ovos", "percentage": "17,9"}],
         "method": ["Bater no liquidificador o açúcar e os ovos.", "Picar o pão e umedecer com o leite.", "Acrescentar ao creme de açúcar e ovos o pão umedecido e bater até homogeneizar.", "Colocar em fôrma untada e caramelizada.", "Assar em banho-maria."]
@@ -30,7 +30,7 @@
         "name": "Pudim de queijo",
         "category": "Pudins e Flans",
         "icon": "fa-solid fa-utensils",
-        "image": "https://raw.githubusercontent.com/munizbruna/confeitaria/50b77e863fb2919a9f585ff7e0944e5b617db4c3/images/pudimleite.jpg",
+        "image": "https://raw.githubusercontent.com/munizbruna/confeitaria/refs/heads/master/images/pudim_de_leite.jpg",
         "description": "Pode-se usar queijo parmesão ou meia cura.",
         "ingredients": [{"name": "Leite líquido", "percentage": "39,0"}, {"name": "Açúcar", "percentage": "31,4"}, {"name": "Farinha de trigo", "percentage": "7,8"}, {"name": "Margarina bolo", "percentage": "3,0"}, {"name": "Queijo ralado", "percentage": "3,8"}, {"name": "Ovos", "percentage": "15,0"}],
         "method": ["Bater no liquidificador a margarina, ovos e leite.", "Misturar com o restante dos ingredientes.", "Colocar em fôrma untada e caramelizada.", "Assar em banho-maria.", "Desenformar frio."]
@@ -39,7 +39,7 @@
         "name": "Bolo pudim",
         "category": "Bolos",
         "icon": "fa-solid fa-utensils",
-        "image": "https://raw.githubusercontent.com/munizbruna/confeitaria/50b77e863fb2919a9f585ff7e0944e5b617db4c3/images/pudimleite.jpg",
+        "image": "https://raw.githubusercontent.com/munizbruna/confeitaria/refs/heads/master/images/pudim_de_leite.jpg",
         "description": "Pode-se adicionar 0,5% de essência de baunilha no pudim.",
         "ingredients": [{"name": "Bolo: Farinha de trigo", "percentage": "25,6"}, {"name": "Bolo: Ovos", "percentage": "17,4"}, {"name": "Bolo: Açúcar", "percentage": "21,7"}, {"name": "Bolo: Margarina bolo", "percentage": "12,8"}, {"name": "Bolo: Leite líquido", "percentage": "15.3"}, {"name": "Bolo: Chocolate em pó", "percentage": "5.6"}, {"name": "Bolo: Fermento químico", "percentage": "1,5"}, {"name": "Pudim: Leite Condensado", "percentage": "45,5"}, {"name": "Pudim: Leite líquido", "percentage": "33,0"}, {"name": "Pudim: Ovos", "percentage": "21,5"}],
         "method": ["Bater margarina e açúcar em 3ª velocidade com batedor globo até formar creme.", "Acrescentar os ovos aos poucos e continuar batendo.", "Peneirar farinha, fermento e chocolate, juntar ao creme e misturar em 1ª velocidade.", "Acrescentar o leite aos poucos em 1ª velocidade.", "Colocar em fôrma untada e caramelizada.", "Colocar o pudim e a massa do bolo na forma.", "Assar em banho-maria.", "Desenformar."]
@@ -48,7 +48,7 @@
         "name": "Torta suíça",
         "category": "Tortas",
         "icon": "fa-solid fa-utensils",
-        "image": "https://raw.githubusercontent.com/munizbruna/confeitaria/50b77e863fb2919a9f585ff7e0944e5b617db4c3/images/tortasuica.jpg",
+        "image": "https://raw.githubusercontent.com/munizbruna/confeitaria/refs/heads/master/images/tortasuica.jpg",
         "description": "",
         "ingredients": [{"name": "Leite líquido", "percentage": "48,8"}, {"name": "Açúcar", "percentage": "26,8"}, {"name": "Farinha de trigo", "percentage": "7,3"}, {"name": "Queijo ou coco ralado", "percentage": "7,3"}, {"name": "Gemas", "percentage": "9,8"}],
         "method": ["Misturar farinha e açúcar.", "Bater o restante dos ingredientes no liquidificador e juntar à mistura.", "Colocar em fôrma untada e caramelizada.", "Assar em banho-maria."]
@@ -57,7 +57,7 @@
         "name": "Torta de ricota",
         "category": "Tortas",
         "icon": "fa-solid fa-utensils",
-        "image": "https://raw.githubusercontent.com/munizbruna/confeitaria/50b77e863fb2919a9f585ff7e0944e5b617db4c3/images/tortaricota.jpg",
+        "image": "https://raw.githubusercontent.com/munizbruna/confeitaria/refs/heads/master/images/tortaricota.jpg",
         "description": "Outras opções para decoração da torta de ricota é geleia de frutas amarelas (geleia de brilho de maracujá com pêssego e abacaxi picados) ou frutas vermelhas.",
         "ingredients": [{"name": "Ricota", "percentage": "33,1"}, {"name": "Ovos", "percentage": "13,2"}, {"name": "Amido de milho", "percentage": "2,0"}, {"name": "Leite condensado", "percentage": "26,5"}, {"name": "Açúcar", "percentage": "5,3"}, {"name": "Leite líquido", "percentage": "19,9"}],
         "method": ["Untar a fôrma polvilhar açúcar.", "Bater todos os ingredientes no liquidificador.", "Assar em banho-maria.", "Decorar com goiabada cremosa."]
