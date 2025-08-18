@@ -3,7 +3,7 @@
         "name": "Pudim de leite",
         "category": "Pudins e Flans",
         "icon": "fa-solid fa-utensils",
-        "image": "https://raw.githubusercontent.com/munizbruna/confeitaria/50b77e863fb2919a9f585ff7e0944e5b617db4c3/images/pudimleite.jpg",
+        "image": "https://raw.githubusercontent.com/munizbruna/confeitaria/50b77e863fb2919a9f585ff7e0944e5b617db4c3/images/pudim_de_leite.jpg",
         "description": "",
         "ingredients": [{"name": "Leite condensado", "percentage": "46,9"}, {"name": "Leite líquido", "percentage": "35,2"}, {"name": "Ovos", "percentage": "17,8"}],
         "method": ["Bater todos os ingredientes no liquidificador.", "Colocar em fôrma untada e caramelizada.", "Assar em banho-maria."]

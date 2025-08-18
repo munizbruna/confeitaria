@@ -29,12 +29,20 @@
         h1, h2, h3 {
             font-family: 'Playfair Display', serif;
         }
+        /* Efeito Parallax */
+        .parallax-container {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+/*             height: 60vh !important;
+ */        }
     </style>
 </head>
 <body>
 
     <!-- Cabeçalho -->
-    <header class="bg-[var(--color-title)]/70 backdrop-blur-sm shadow-lg sticky top-0 z-10">
+    <header class="bg-[var(--color-title)]/70 backdrop-blur-sm shadow-lg sticky top-0 z-20">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="text-2xl font-bold text-[var(--color-primary)]">
                 <a href="#">Confeitaria Criativa</a>
@@ -52,43 +60,48 @@
         </nav>
     </header>
 
-    <main class="container mx-auto px-6 py-12">
-
-        <!-- Seção 1: Apresentação e Dropdown -->
-        <section class="text-center py-16">
-            <h1 class="text-5xl md:text-6xl font-bold text-[var(--color-background-soft)] mb-4">O Sabor Encontra a Tradição</h1>
-            <p class="text-lg text-[var(--color-accent)] max-w-3xl mx-auto mb-8">
-                Bem-vindo à Confeitaria Criativa! Aqui, compartilhamos receitas incríveis para todos os momentos. Explore nossos pratos, descubra novos sabores e inspire-se para cozinhar.
-            </p>
-            <div class="relative inline-block max-w-sm w-full">
-                <select id="recipes-dropdown" class="w-full appearance-none bg-[var(--color-accent)]/30 border border-[var(--color-primary-dark)] text-[var(--color-background-soft)] py-3 px-4 pr-8 rounded-full leading-tight focus:outline-none focus:bg-[var(--color-accent)]/50 focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary-dark)] transition">
-                    <option value="">Navegue por todas as receitas...</option>
-                    <!-- Opções do dropdown serão populadas via JavaScript -->
-                </select>
-                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-[var(--color-accent)]">
-                    <i data-lucide="chevron-down" class="h-5 w-5"></i>
+    <main>
+        <!-- Seção 1: Hero com Parallax -->
+        <section 
+            class="parallax-container h-[85vh] w-full flex items-center justify-center text-center text-white" 
+            style="background-image: url('images/cozinha.jpg');">
+            <div class="bg-white/70 p-8 rounded-lg max-w-5xl mx-auto">
+                <h1 class="text-5xl md:text-6xl font-bold text-[var(--color-title)] mb-4">O Sabor Encontra a Tradição</h1>
+                <p class="text-lg text-[var(--color-title)] mb-8">
+                    Bem-vindo à Confeitaria Criativa! Aqui, compartilhamos receitas incríveis para todos os momentos. Explore nossos pratos, descubra novos sabores e inspire-se para cozinhar.
+                </p>
+                <div class="relative inline-block max-w-sm w-full">
+                    <select id="recipes-dropdown" class="w-full appearance-none bg-[var(--color-background-soft)]/80 border border-[var(--color-primary-dark)] text-[var(--color-title)] font-medium py-3 px-4 pr-8 rounded-full leading-tight focus:outline-none focus:bg-[var(--color-background-soft)] focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary-dark)] transition">
+                        <option value="">Navegue por todas as receitas...</option>
+                        <!-- Opções do dropdown serão populadas via JavaScript -->
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-[var(--color-accent)]">
+                        <i data-lucide="chevron-down" class="h-5 w-5"></i>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Seção 2: Receitas Mais Acessadas -->
-        <section id="populares" class="py-16">
-            <h2 class="text-4xl font-bold text-center text-[var(--color-background-soft)] mb-12">Receitas Populares</h2>
-            <div id="popular-recipes-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Cards de receita serão populados via JavaScript -->
-                 <p class="text-center col-span-full">Carregando receitas...</p>
-            </div>
-        </section>
+        <!-- Conteúdo Principal -->
+        <div class="container mx-auto px-6 py-12">
+            <!-- Seção 2: Receitas Mais Acessadas -->
+            <section id="populares" class="py-16">
+                <h2 class="text-4xl font-bold text-center text-[var(--color-background-soft)] mb-12">Receitas Populares</h2>
+                <div id="popular-recipes-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Cards de receita serão populados via JavaScript -->
+                     <p class="text-center col-span-full">Carregando receitas...</p>
+                </div>
+            </section>
 
-        <!-- Seção 3: Todas as Categorias -->
-        <section id="categorias" class="py-16 bg-[var(--color-title)]/60 rounded-2xl">
-            <h2 class="text-4xl font-bold text-center text-[var(--color-background-soft)] mb-12">Explore por Categoria</h2>
-            <div id="categories-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-                <!-- Cards de categoria serão populados via JavaScript -->
-                <p class="text-center col-span-full">Carregando categorias...</p>
-            </div>
-        </section>
-
+            <!-- Seção 3: Todas as Categorias -->
+            <section id="categorias" class="py-16 bg-[var(--color-title)]/60 rounded-2xl">
+                <h2 class="text-4xl font-bold text-center text-[var(--color-background-soft)] mb-12">Explore por Categoria</h2>
+                <div id="categories-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                    <!-- Cards de categoria serão populados via JavaScript -->
+                    <p class="text-center col-span-full">Carregando categorias...</p>
+                </div>
+            </section>
+        </div>
     </main>
 
     <!-- Rodapé -->
@@ -164,10 +177,9 @@
                   card.href = `${RECIPE_PAGE_URL}?recipe=${key}`;
                   card.className = "block bg-[var(--color-accent)]/30 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300";
                   
-                  const imageUrl = `https://placehold.co/600x400/${'D9A679'}/${'260B01'}?text=${encodeURIComponent(recipe.name)}`;
-
                   card.innerHTML = `
-                      <img src="${imageUrl}" alt="Foto de ${recipe.name}" class="w-full h-48 object-cover">
+                      <img src="${recipe.image}" alt="Foto de ${recipe.name}" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='        "image": "https://raw.githubusercontent.com/munizbruna/confeitaria/50b77e863fb2919a9f585ff7e0944e5b617db4c3/images/${recipe.name}.jpg",
+';">
                       <div class="p-6">
                           <h3 class="text-2xl font-bold text-white mb-2">${recipe.name}</h3>
                           <div class="flex items-center text-sm text-[var(--color-background-soft)]">
@@ -215,7 +227,6 @@
               sortedCategories.forEach(category => {
                   const iconName = categoryIcons[category] || categoryIcons['default'];
                   const card = document.createElement('a');
-                  // ATUALIZAÇÃO: O link agora aponta para a página de categoria
                   card.href = `${CATEGORY_PAGE_URL}?category=${encodeURIComponent(category)}`;
                   card.className = "block bg-[var(--color-accent)]/30 p-6 rounded-xl text-center shadow-md hover:shadow-xl hover:bg-[var(--color-accent)]/50 transition-all duration-300";
                   card.innerHTML = `
