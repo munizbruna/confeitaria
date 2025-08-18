@@ -30,12 +30,24 @@
             cursor: not-allowed;
             opacity: 0.7;
         }
+        /* Efeito Parallax */
+        .parallax-container {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        .backdrop-blur-md{
+            --tw-backdrop-blur: blur(55px) !important;
+        }
+
+
     </style>
 </head>
 <body>
 
     <!-- Cabeçalho -->
-    <header class="bg-[var(--color-title)]/70 backdrop-blur-sm shadow-lg sticky top-0 z-10">
+    <header class="bg-[var(--color-title)]/70 backdrop-blur-sm shadow-lg sticky top-0 z-20">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="text-2xl font-bold text-[var(--color-primary)]">
                 <a href="testedinamico.html">Confeitaria Criativa</a>
@@ -52,75 +64,77 @@
         </nav>
     </header>
 
-    <main class="container mx-auto px-6 py-12">
-        <div class="max-w-6xl mx-auto bg-[var(--color-accent)]/30 p-8 rounded-2xl shadow-lg">
+    <main>
+        <!-- Imagem da Receita com Parallax -->
+        <div id="recipe-image-parallax" class="parallax-container h-96 w-full">
+            <!-- A imagem será o background deste container -->
+        </div>
 
-            <!-- Imagem da Receita -->
-            <div class="mb-8 rounded-lg overflow-hidden">
-                <img id="recipe-image" src="https://placehold.co/800x400/D9A679/260B01?text=Carregando..." alt="Foto da receita" class="w-full h-96 object-cover">
-            </div>
+        <div class="container mx-auto px-6 -mt-32 relative z-10">
+            <div class="max-w-4xl mx-auto bg-[var(--color-accent)]/60 backdrop-blur-md p-8 rounded-2xl shadow-lg">
 
-            <!-- Nome da Receita -->
-            <h1 id="recipe-name" class="text-5xl font-bold text-center text-white mb-8">Carregando...</h1>
+                <!-- Nome da Receita -->
+                <h1 id="recipe-name" class="text-5xl font-bold text-center text-white mb-8">Carregando...</h1>
 
-            <!-- Seção de Cálculo -->
-            <div class="bg-[var(--color-title)]/50 p-6 rounded-xl mb-10">
-                <h2 class="text-2xl font-bold mb-4 text-center">Calcular Rendimento</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-end">
-                    <div>
-                        <label for="total-weight" class="block text-sm font-medium text-[var(--color-background-soft)] mb-1">Quantidade total (kg)</label>
-                        <input type="number" id="total-weight" placeholder="Ex: 1.5" class="w-full bg-[var(--color-accent)]/50 border border-[var(--color-primary-dark)] rounded-lg p-2 focus:ring-2 focus:ring-[var(--color-primary)] focus:border-[var(--color-primary)] transition">
-                    </div>
-                    <div class="text-center text-[var(--color-background-soft)] font-semibold">OU</div>
-                    <div class="grid grid-cols-2 gap-4">
+                <!-- Seção de Cálculo -->
+                <div class="bg-[var(--color-title)]/50 p-6 rounded-xl mb-10">
+                    <h2 class="text-2xl font-bold mb-4 text-center">Calcular Rendimento</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-end">
                         <div>
-                           <label for="item-count" class="block text-sm font-medium text-[var(--color-background-soft)] mb-1">Qtd. de itens</label>
-                           <input type="number" id="item-count" placeholder="Ex: 100" class="w-full bg-[var(--color-accent)]/50 border border-[var(--color-primary-dark)] rounded-lg p-2 focus:ring-2 focus:ring-[var(--color-primary)] focus:border-[var(--color-primary)] transition">
+                            <label for="total-weight" class="block text-sm font-medium text-[var(--color-background-soft)] mb-1">Quantidade total (kg)</label>
+                            <input type="number" id="total-weight" placeholder="Ex: 1.5" class="w-full bg-[var(--color-accent)]/50 border border-[var(--color-primary-dark)] rounded-lg p-2 focus:ring-2 focus:ring-[var(--color-primary)] focus:border-[var(--color-primary)] transition">
                         </div>
-                        <div>
-                           <label for="item-weight" class="block text-sm font-medium text-[var(--color-background-soft)] mb-1">Peso unitário (g)</label>
-                           <input type="number" id="item-weight" placeholder="Ex: 15" class="w-full bg-[var(--color-accent)]/50 border border-[var(--color-primary-dark)] rounded-lg p-2 focus:ring-2 focus:ring-[var(--color-primary)] focus:border-[var(--color-primary)] transition">
+                        <div class="text-center text-[var(--color-background-soft)] font-semibold">OU</div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                               <label for="item-count" class="block text-sm font-medium text-[var(--color-background-soft)] mb-1">Qtd. de itens</label>
+                               <input type="number" id="item-count" placeholder="Ex: 100" class="w-full bg-[var(--color-accent)]/50 border border-[var(--color-primary-dark)] rounded-lg p-2 focus:ring-2 focus:ring-[var(--color-primary)] focus:border-[var(--color-primary)] transition">
+                            </div>
+                            <div>
+                               <label for="item-weight" class="block text-sm font-medium text-[var(--color-background-soft)] mb-1">Peso unitário (g)</label>
+                               <input type="number" id="item-weight" placeholder="Ex: 15" class="w-full bg-[var(--color-accent)]/50 border border-[var(--color-primary-dark)] rounded-lg p-2 focus:ring-2 focus:ring-[var(--color-primary)] focus:border-[var(--color-primary)] transition">
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Tabela de Ingredientes -->
+                <section class="mb-10">
+                    <h2 class="text-3xl font-bold mb-6">Ingredientes</h2>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full bg-[var(--color-title)]/30 border border-[var(--color-primary-dark)] rounded-lg">
+                            <thead class="bg-[var(--color-title)]/50">
+                                <tr>
+                                    <th class="text-left py-3 px-4 font-semibold text-sm">Ingrediente</th>
+                                    <th class="text-center py-3 px-4 font-semibold text-sm w-24">%</th>
+                                    <th class="text-center py-3 px-4 font-semibold text-sm w-32">Peso (g)</th>
+                                </tr>
+                            </thead>
+                            <tbody id="ingredients-table"></tbody>
+                            <tfoot class="bg-[var(--color-title)]/50 font-bold">
+                                <tr>
+                                    <td class="text-left py-3 px-4">Total</td>
+                                    <td id="total-percentage" class="text-center py-3 px-4">100</td>
+                                    <td id="total-weight-display" class="text-center py-3 px-4">0 g</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Modo de Preparo -->
+                <section class="mb-10">
+                    <h2 class="text-3xl font-bold mb-6">Modo de Preparo</h2>
+                    <ul id="method-list" class="list-decimal list-inside space-y-3 text-[var(--color-background-soft)] leading-relaxed"></ul>
+                </section>
+
+                <!-- Observações -->
+                <section id="observacoes" class="hidden">
+                    <h2 class="text-3xl font-bold mb-6">Observações</h2>
+                    <p id="recipe-description" class="italic bg-[var(--color-title)]/30 p-4 rounded-lg"></p>
+                </section>
+
             </div>
-
-            <!-- Tabela de Ingredientes -->
-            <section class="mb-10">
-                <h2 class="text-3xl font-bold mb-6">Ingredientes</h2>
-                <div class="overflow-x-auto">
-                    <table class="min-w-full bg-[var(--color-title)]/30 border border-[var(--color-primary-dark)] rounded-lg">
-                        <thead class="bg-[var(--color-title)]/50">
-                            <tr>
-                                <th class="text-left py-3 px-4 font-semibold text-sm">Ingrediente</th>
-                                <th class="text-center py-3 px-4 font-semibold text-sm w-24">%</th>
-                                <th class="text-center py-3 px-4 font-semibold text-sm w-32">Peso (g)</th>
-                            </tr>
-                        </thead>
-                        <tbody id="ingredients-table"></tbody>
-                        <tfoot class="bg-[var(--color-title)]/50 font-bold">
-                            <tr>
-                                <td class="text-left py-3 px-4">Total</td>
-                                <td id="total-percentage" class="text-center py-3 px-4">100</td>
-                                <td id="total-weight-display" class="text-center py-3 px-4">0 g</td>
-                            </tr>
-                        </tfoot>
-                    </table>
-                </div>
-            </section>
-
-            <!-- Modo de Preparo -->
-            <section class="mb-10">
-                <h2 class="text-3xl font-bold mb-6">Modo de Preparo</h2>
-                <ul id="method-list" class="list-decimal list-inside space-y-3 text-[var(--color-background-soft)] leading-relaxed"></ul>
-            </section>
-
-            <!-- Observações -->
-            <section id="observacoes" class="hidden">
-                <h2 class="text-3xl font-bold mb-6">Observações</h2>
-                <p id="recipe-description" class="italic bg-[var(--color-title)]/30 p-4 rounded-lg"></p>
-            </section>
-
         </div>
     </main>
 
@@ -139,7 +153,7 @@
             const ingredientsTableBody = document.getElementById('ingredients-table');
             const totalWeightDisplay = document.getElementById('total-weight-display');
             const recipeNameH1 = document.getElementById('recipe-name');
-            const recipeImageEl = document.getElementById('recipe-image');
+            const recipeImageParallaxEl = document.getElementById('recipe-image-parallax');
             const recipeDescriptionEl = document.getElementById('recipe-description');
             const observacoesSection = document.getElementById('observacoes');
 
@@ -152,8 +166,7 @@
                 recipeNameH1.textContent = recipeData.name;
                 document.title = `Receita de ${recipeData.name} - Confeitaria Criativa`;
                 
-                recipeImageEl.src = recipeData.image;
-                recipeImageEl.alt = `Foto de ${recipeData.name}`;
+                recipeImageParallaxEl.style.backgroundImage = `url('${recipeData.image}')`;
 
                 if (recipeData.description) {
                     recipeDescriptionEl.textContent = recipeData.description;
