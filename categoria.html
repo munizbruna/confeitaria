@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categoria - Confeitaria Criativa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        :root {
+            --color-primary: #D9A679;
+            --color-primary-dark: #8C6B4F;
+            --color-title: #260B01;
+            --color-background-soft: #D9CEC1;
+            --color-accent: #593312;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-title);
+            color: var(--color-background-soft);
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header class="bg-[var(--color-title)]/70 backdrop-blur-sm shadow-lg sticky top-0 z-10">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-[var(--color-primary)]">
+                <a href="testedinamico.html">Confeitaria Criativa</a>
+            </div>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="testedinamico.html#categorias" class="text-[var(--color-accent)] hover:text-[var(--color-primary)]">Categorias</a>
+                <a href="#" class="bg-[var(--color-primary)] text-white px-4 py-2 rounded-full hover:bg-[var(--color-primary-dark)] transition-colors">Enviar Receita</a>
+            </div>
+            <div class="md:hidden">
+                <button class="text-[var(--color-accent)] hover:text-[var(--color-primary)]">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <!-- Seção da Categoria -->
+        <section class="text-center py-16">
+            <h1 id="category-name" class="text-5xl md:text-6xl font-bold text-[var(--color-background-soft)] mb-4">Carregando...</h1>
+            <p id="category-description" class="text-lg text-[var(--color-accent)] max-w-3xl mx-auto mb-8">
+                Descubra as melhores receitas desta categoria.
+            </p>
+        </section>
+
+        <!-- Grade de Receitas -->
+        <section id="recipes-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Cards de receita serão populados via JavaScript -->
+            <p class="text-center col-span-full">Carregando receitas...</p>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-[var(--color-title)]/80 text-[var(--color-background-soft)] mt-16">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; 2024 Confeitaria Criativa. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const categoryNameEl = document.getElementById('category-name');
+            const categoryDescriptionEl = document.getElementById('category-description');
+            const recipesGridEl = document.getElementById('recipes-grid');
+
+            const categoryDescriptions = {
+                'Bolos': 'Deliciosos bolos para todas as ocasiões, desde os mais simples até os mais elaborados.',
+                'Pudins e Flans': 'Sobremesas cremosas e irresistíveis que derretem na boca.',
+                'Tortas': 'Tortas doces incríveis, com massas crocantes e recheios variados.',
+                'Doces Tradicionais': 'Os clássicos da confeitaria que trazem memórias afetivas e muito sabor.',
+                'Biscoitos e Petit Fours': 'Pequenas delícias para acompanhar um café ou para presentear.',
+                'Salgados': 'Opções deliciosas para festas, lanches ou qualquer momento.',
+                'Pães e Massas Doces': 'Receitas fofinhas e saborosas para o café da manhã ou da tarde.',
+                'Bombons e Trufas': 'Pequenos tesouros de chocolate com recheios surpreendentes.',
+                'Massas Base': 'As receitas fundamentais para você começar a criar suas próprias sobremesas.',
+                'Sobremesas Geladas': 'Refrescantes e saborosas, perfeitas para os dias mais quentes.',
+                'Cremes e Recheios': 'A base para rechear e cobrir bolos, tortas e outros doces.',
+                'Caldas e Coberturas': 'O toque final que transforma qualquer sobremesa em uma obra de arte.',
+                 'Montagem e Decoração': 'Inspire-se com técnicas e ideias para decorar suas criações.',
+                'Preparações Base': 'Receitas essenciais que servem de ponto de partida para muitas outras.',
+                'default': 'Descubra as melhores receitas desta categoria.'
+            };
+
+            async function loadCategoryRecipes() {
+                try {
+                    const urlParams = new URLSearchParams(window.location.search);
+                    const category = urlParams.get('category');
+
+                    if (!category) {
+                        categoryNameEl.textContent = 'Categoria não encontrada';
+                        recipesGridEl.innerHTML = '<p class="text-center col-span-full">Por favor, selecione uma categoria na página inicial.</p>';
+                        return;
+                    }
+
+                    // Decodifica o nome da categoria para lidar com caracteres especiais
+                    const decodedCategory = decodeURIComponent(category);
+                    
+                    document.title = `${decodedCategory} - Confeitaria Criativa`;
+                    categoryNameEl.textContent = decodedCategory;
+                    categoryDescriptionEl.textContent = categoryDescriptions[decodedCategory] || categoryDescriptions['default'];
+
+
+                    const response = await fetch('receitas.json');
+                    if (!response.ok) {
+                        throw new Error('Falha ao carregar o arquivo de receitas.');
+                    }
+                    const allRecipes = await response.json();
+
+                    const filteredRecipes = Object.entries(allRecipes).filter(([key, recipe]) => {
+                        return recipe.category === decodedCategory;
+                    });
+
+                    renderRecipes(filteredRecipes);
+
+                } catch (error) {
+                    console.error('Erro ao carregar receitas da categoria:', error);
+                    recipesGridEl.innerHTML = '<p class="text-center col-span-full text-red-400">Não foi possível carregar as receitas.</p>';
+                }
+            }
+
+            function renderRecipes(recipes) {
+                recipesGridEl.innerHTML = '';
+
+                if (recipes.length === 0) {
+                    recipesGridEl.innerHTML = '<p class="text-center col-span-full">Nenhuma receita encontrada nesta categoria.</p>';
+                    return;
+                }
+
+                recipes.forEach(([key, recipe]) => {
+                    const card = document.createElement('a');
+                    card.href = `receita.html?recipe=${key}`;
+                    card.className = "block bg-[var(--color-accent)]/30 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300";
+                    
+                    // Adiciona uma imagem de placeholder com texto
+                    const imageUrl = `https://placehold.co/600x400/${'D9A679'}/${'260B01'}?text=${encodeURIComponent(recipe.name)}`;
+
+                    card.innerHTML = `
+                        <img src="${imageUrl}" alt="Foto de ${recipe.name}" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2">${recipe.name}</h3>
+                        </div>
+                    `;
+                    recipesGridEl.appendChild(card);
+                });
+            }
+
+            loadCategoryRecipes().then(() => {
+                lucide.createIcons();
+            });
+        });
+    </script>
+</body>
+</html>
