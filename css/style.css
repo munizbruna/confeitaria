@@ -1,0 +1,97 @@
+/* Definindo a nova paleta de cores como variáveis CSS */
+:root {
+  --color-primary: #d9a679;
+  --color-primary-dark: #8c6b4f;
+  --color-title: #260b01;
+  --color-background-soft: #d9cec1;
+  --color-accent: #593312;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--color-title);
+  color: var(--color-background-soft);
+}
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+}
+/* Efeito Parallax */
+.parallax-container {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh !important;
+}
+
+/* Enviar */
+:root {
+  --color-primary: #d9a679;
+  --color-primary-dark: #8c6b4f;
+  --color-title: #260b01;
+  --color-background-soft: #d9cec1;
+  --color-accent: #593312;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--color-title);
+  color: var(--color-background-soft);
+}
+h1,
+h2,
+h3,
+label {
+  font-family: "Playfair Display", serif;
+}
+.form-input {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-primary-dark);
+  background-color: var(--color-accent);
+  color: var(--color-background-soft);
+  transition: all 0.3s ease;
+}
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(217, 166, 121, 0.5);
+}
+.form-label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+}
+
+/* Categoria */
+:root {
+  --color-primary: #d9a679;
+  --color-primary-dark: #8c6b4f;
+  --color-title: #260b01;
+  --color-background-soft: #d9cec1;
+  --color-accent: #593312;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--color-title);
+  color: var(--color-background-soft);
+}
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+}

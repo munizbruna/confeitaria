@@ -1,0 +1,32 @@
+:root {
+    --color-primary: #D9A679;
+    --color-primary-dark: #8C6B4F;
+    --color-title: #260B01;
+    --color-background-soft: #D9CEC1;
+    --color-accent: #593312;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-title);
+    color: var(--color-background-soft);
+}
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+input:disabled {
+    background-color: #4a3a2b;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+/* Efeito Parallax */
+.parallax-container {
+    background-attachment: fixed;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 50vh !important;
+}
+.backdrop-blur-md{
+    --tw-backdrop-blur: blur(55px) !important;
+}
+

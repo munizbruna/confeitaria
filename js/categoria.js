@@ -1,0 +1,90 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const categoryNameEl = document.getElementById('category-name');
+    const categoryDescriptionEl = document.getElementById('category-description');
+    const recipesGridEl = document.getElementById('recipes-grid');
+
+    const categoryDescriptions = {
+        'Bolos': 'Deliciosos bolos para todas as ocasiões, desde os mais simples até os mais elaborados.',
+        'Pudins e Flans': 'Sobremesas cremosas e irresistíveis que derretem na boca.',
+        'Tortas': 'Tortas doces incríveis, com massas crocantes e recheios variados.',
+        'Doces Tradicionais': 'Os clássicos da confeitaria que trazem memórias afetivas e muito sabor.',
+        'Biscoitos e Petit Fours': 'Pequenas delícias para acompanhar um café ou para presentear.',
+        'Salgados': 'Opções deliciosas para festas, lanches ou qualquer momento.',
+        'Pães e Massas Doces': 'Receitas fofinhas e saborosas para o café da manhã ou da tarde.',
+        'Bombons e Trufas': 'Pequenos tesouros de chocolate com recheios surpreendentes.',
+        'Massas Base': 'As receitas fundamentais para você começar a criar suas próprias sobremesas.',
+        'Sobremesas Geladas': 'Refrescantes e saborosas, perfeitas para os dias mais quentes.',
+        'Cremes e Recheios': 'A base para rechear e cobrir bolos, tortas e outros doces.',
+        'Caldas e Coberturas': 'O toque final que transforma qualquer sobremesa em uma obra de arte.',
+         'Montagem e Decoração': 'Inspire-se com técnicas e ideias para decorar suas criações.',
+        'Preparações Base': 'Receitas essenciais que servem de ponto de partida para muitas outras.',
+        'default': 'Descubra as melhores receitas desta categoria.'
+    };
+
+    async function loadCategoryRecipes() {
+        try {
+            const urlParams = new URLSearchParams(window.location.search);
+            const category = urlParams.get('category');
+
+            if (!category) {
+                categoryNameEl.textContent = 'Categoria não encontrada';
+                recipesGridEl.innerHTML = '<p class="text-center col-span-full">Por favor, selecione uma categoria na página inicial.</p>';
+                return;
+            }
+
+            // Decodifica o nome da categoria para lidar com caracteres especiais
+            const decodedCategory = decodeURIComponent(category);
+            
+            document.title = `${decodedCategory} - Confeitaria Criativa`;
+            categoryNameEl.textContent = decodedCategory;
+            categoryDescriptionEl.textContent = categoryDescriptions[decodedCategory] || categoryDescriptions['default'];
+
+
+            const response = await fetch('receitas.json');
+            if (!response.ok) {
+                throw new Error('Falha ao carregar o arquivo de receitas.');
+            }
+            const allRecipes = await response.json();
+
+            const filteredRecipes = Object.entries(allRecipes).filter(([key, recipe]) => {
+                return recipe.category === decodedCategory;
+            });
+
+            renderRecipes(filteredRecipes);
+
+        } catch (error) {
+            console.error('Erro ao carregar receitas da categoria:', error);
+            recipesGridEl.innerHTML = '<p class="text-center col-span-full text-red-400">Não foi possível carregar as receitas.</p>';
+        }
+    }
+
+    function renderRecipes(recipes) {
+        recipesGridEl.innerHTML = '';
+
+        if (recipes.length === 0) {
+            recipesGridEl.innerHTML = '<p class="text-center col-span-full">Nenhuma receita encontrada nesta categoria.</p>';
+            return;
+        }
+
+        recipes.forEach(([key, recipe]) => {
+            const card = document.createElement('a');
+            card.href = `receita.html?recipe=${key}`;
+            card.className = "block bg-[var(--color-accent)]/30 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300";
+            
+            // Adiciona uma imagem de placeholder com texto
+            const imageUrl = `https://placehold.co/600x400/${'D9A679'}/${'260B01'}?text=${encodeURIComponent(recipe.name)}`;
+
+            card.innerHTML = `
+                <img src="${imageUrl}" alt="Foto de ${recipe.name}" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-white mb-2">${recipe.name}</h3>
+                </div>
+            `;
+            recipesGridEl.appendChild(card);
+        });
+    }
+
+    loadCategoryRecipes().then(() => {
+        lucide.createIcons();
+    });
+});
