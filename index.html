@@ -9,37 +9,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
-    <!-- Adicionando Font Awesome para os ícones das receitas -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./css/style.css">
-    
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Cabeçalho -->
-    <header class="bg-[var(--color-title)]/70 backdrop-blur-sm shadow-lg sticky top-0 z-20">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold text-[var(--color-primary)]">
-                <a href="#">Fouet de Casa</a>
-            </div>
-            <div class="hidden md:flex space-x-6 items-center">
-                <a href="#populares" class="text-[var(--color-accent)] hover:text-[var(--color-primary)]">Populares</a>
-                <a href="#categorias" class="text-[var(--color-accent)] hover:text-[var(--color-primary)]">Categorias</a>
-                <a href="enviar.html" class="bg-[var(--color-primary)] text-white px-4 py-2 rounded-full hover:bg-[var(--color-primary-dark)] transition-colors">Enviar Receita</a>
-            </div>
-            <div class="md:hidden">
-                <button class="text-[var(--color-accent)] hover:text-[var(--color-primary)]">
-                    <i data-lucide="menu"></i>
-                </button>
-            </div>
-        </nav>
-    </header>
+    <!-- Wrapper para a seção Hero que agora inclui o Header -->
+    <div class="hero-wrapper parallax-container" style="background-image: url('images/cozinha.jpg');">
+        
+        <!-- O cabeçalho está agora DENTRO do container com a imagem de fundo -->
+        <header id="header-placeholder" class="bg-[var(--color-title)]/70 backdrop-blur-sm shadow-lg sticky top-0 z-20"></header>
 
-    <main>
-        <!-- Seção 1: Hero com Parallax -->
-        <section 
-            class="parallax-container h-[85vh] w-full flex items-center justify-center text-center text-white" 
-            style="background-image: url('images/cozinha.jpg');">
+        <!-- Conteúdo do Hero -->
+        <div class="h-full flex items-center justify-center text-center">
             <div class="bg-white/70 p-8 rounded-lg max-w-5xl mx-auto">
                 <h1 class="text-5xl md:text-6xl font-bold text-[var(--color-title)] mb-4">As melhores receitas na sua casa</h1>
                 <p class="text-lg text-[var(--color-title)] mb-8">
@@ -48,43 +30,41 @@
                 <div class="relative inline-block max-w-sm w-full">
                     <select id="recipes-dropdown" class="w-full appearance-none bg-[var(--color-background-soft)]/80 border border-[var(--color-primary-dark)] text-[var(--color-title)] font-medium py-3 px-4 pr-8 rounded-full leading-tight focus:outline-none focus:bg-[var(--color-background-soft)] focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary-dark)] transition">
                         <option value="">Navegue por todas as receitas...</option>
-                        <!-- Opções do dropdown serão populadas via JavaScript -->
                     </select>
                     <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-[var(--color-accent)]">
                         <i data-lucide="chevron-down" class="h-5 w-5"></i>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
 
-        <!-- Conteúdo Principal -->
+    <!-- O conteúdo principal agora começa após a seção hero -->
+    <main>
         <div class="container mx-auto px-6 py-12">
-            <!-- Seção 2: Receitas Mais Acessadas -->
+            <!-- Seção de Receitas Populares -->
             <section id="populares" class="py-16">
                 <h2 class="text-4xl font-bold text-center text-[var(--color-background-soft)] mb-12">Receitas Populares</h2>
-                <div id="popular-recipes-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Cards de receita serão populados via JavaScript -->
-                     <p class="text-center col-span-full">Carregando receitas...</p>
+                <div id="popular-recipes-grid" class="grid grid-cols-1 sm-grid-cols-2 lg:grid-cols-4 gap-8">
+                    <p class="text-center col-span-full">Carregando receitas...</p>
                 </div>
             </section>
 
-            <!-- Seção 3: Todas as Categorias -->
+            <!-- Seção de Categorias -->
             <section id="categorias" class="py-16 bg-[var(--color-title)]/60 rounded-2xl">
                 <h2 class="text-4xl font-bold text-center text-[var(--color-background-soft)] mb-12">Explore por Categoria</h2>
                 <div id="categories-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
-                    <!-- Cards de categoria serão populados via JavaScript -->
                     <p class="text-center col-span-full">Carregando categorias...</p>
                 </div>
             </section>
         </div>
     </main>
 
-    <!-- Rodapé -->
-    <footer class="bg-[var(--color-title)]/80 text-[var(--color-background-soft)] mt-16">
-        <div class="container mx-auto px-6 py-8 text-center">
-            <p>&copy; 2024 Confeitaria Criativa. Todos os direitos reservados.</p>
-        </div>
-    </footer>
-<script src="script.js"></script>
-  </body>
+    <!-- O rodapé será inserido aqui pelo JavaScript -->
+    <footer id="footer-placeholder" class="bg-[var(--color-title)]/80 text-[var(--color-background-soft)] mt-16"></footer>
+
+    <!-- Scripts -->
+    <script src="js/componentes.js"></script>
+    <script src="js/script.js"></script>
+</body>
 </html>

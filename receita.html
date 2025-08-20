@@ -10,26 +10,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="./css/receitas.css">
+    <link rel="stylesheet" href="./css/style.css">
+
 </head>
 <body>
 
-    <!-- Cabeçalho -->
-    <header class="bg-[var(--color-title)]/70 backdrop-blur-sm shadow-lg sticky top-0 z-20">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold text-[var(--color-primary)]">
-                <a href="index.html">Confeitaria Criativa</a>
-            </div>
-            <div class="hidden md:flex space-x-6 items-center">
-                <a href="testedinamico.html#categorias" class="text-[var(--color-accent)] hover:text-[var(--color-primary)]">Categorias</a>
-                <a href="#" class="bg-[var(--color-primary)] text-white px-4 py-2 rounded-full hover:bg-[var(--color-primary-dark)] transition-colors">Enviar Receita</a>
-            </div>
-            <div class="md:hidden">
-                <button class="text-[var(--color-accent)] hover:text-[var(--color-primary)]">
-                    <i data-lucide="menu"></i>
-                </button>
-            </div>
-        </nav>
-    </header>
+       <!-- O cabeçalho está agora DENTRO do container com a imagem de fundo -->
+       <header id="header-placeholder" class="bg-[var(--color-title)]/70 backdrop-blur-sm shadow-lg sticky top-0 z-20"></header>
 
     <main>
         <!-- Imagem da Receita com Parallax -->
@@ -41,7 +28,7 @@
             <div class="max-w-4xl mx-auto bg-[var(--color-accent)]/60 backdrop-blur-md p-8 rounded-2xl shadow-lg">
 
                 <!-- Nome da Receita -->
-                <h1 id="recipe-name" class="text-5xl font-bold text-center text-white mb-8">Carregando...</h1>
+                <h1 id="recipe-name" class="text-5xl font-bold text-center text-[var(--color-title)] mb-8">Carregando...</h1>
 
                 <!-- Seção de Cálculo -->
                 <div class="bg-[var(--color-title)]/50 p-6 rounded-xl mb-10">
@@ -52,7 +39,7 @@
                             <input type="number" id="total-weight" placeholder="Ex: 1.5" class="w-full bg-[var(--color-accent)]/50 border border-[var(--color-primary-dark)] rounded-lg p-2 focus:ring-2 focus:ring-[var(--color-primary)] focus:border-[var(--color-primary)] transition">
                         </div>
                         <div class="text-center text-[var(--color-background-soft)] font-semibold">OU</div>
-                        <div class="grid grid-cols-2 gap-4">
+                        <div class="valores grid grid-cols-2 gap-4">
                             <div>
                                <label for="item-count" class="block text-sm font-medium text-[var(--color-background-soft)] mb-1">Qtd. de itens</label>
                                <input type="number" id="item-count" placeholder="Ex: 100" class="w-full bg-[var(--color-accent)]/50 border border-[var(--color-primary-dark)] rounded-lg p-2 focus:ring-2 focus:ring-[var(--color-primary)] focus:border-[var(--color-primary)] transition">
@@ -112,5 +99,9 @@
         </div>
     </footer>
 <script src="./js/receitas.js"></script>
+<script src="./js/componentes.js"></script>
+<script src="./js/script.js"></script>
+
+
 </body>
 </html>

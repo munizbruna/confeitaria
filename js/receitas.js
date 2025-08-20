@@ -1,4 +1,7 @@
+// Este script controla a funcionalidade da página de visualização de uma receita (receita.html)
+
 document.addEventListener('DOMContentLoaded', () => {
+    // Elementos do DOM para cálculo e exibição da receita
     const totalWeightInput = document.getElementById('total-weight');
     const itemCountInput = document.getElementById('item-count');
     const itemWeightInput = document.getElementById('item-weight');
@@ -9,6 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const recipeDescriptionEl = document.getElementById('recipe-description');
     const observacoesSection = document.getElementById('observacoes');
 
+    /**
+     * Popula a página com os dados de uma receita específica.
+     * @param {object} recipeData - O objeto da receita a ser exibida.
+     */
     function populateRecipeData(recipeData) {
         if (!recipeData) {
             recipeNameH1.textContent = "Receita não encontrada!";
@@ -18,13 +25,16 @@ document.addEventListener('DOMContentLoaded', () => {
         recipeNameH1.textContent = recipeData.name;
         document.title = `Receita de ${recipeData.name} - Confeitaria Criativa`;
         
+        // Define a imagem de fundo para o efeito parallax
         recipeImageParallaxEl.style.backgroundImage = `url('${recipeData.image}')`;
 
+        // Mostra a seção de observações apenas se houver descrição
         if (recipeData.description) {
             recipeDescriptionEl.textContent = recipeData.description;
             observacoesSection.classList.remove('hidden');
         }
 
+        // Popula a tabela de ingredientes
         ingredientsTableBody.innerHTML = '';
         recipeData.ingredients.forEach(ing => {
             const row = document.createElement('tr');
@@ -37,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ingredientsTableBody.appendChild(row);
         });
 
+        // Popula a lista do modo de preparo
         const methodList = document.getElementById('method-list');
         methodList.innerHTML = '';
         recipeData.method.forEach(step => {
@@ -46,18 +57,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    /**
+     * Atualiza os pesos dos ingredientes com base no peso total calculado.
+     * @param {number} totalWeightGrams - O peso total da receita em gramas.
+     */
     function updateIngredientWeights(totalWeightGrams) {
         const weightCells = ingredientsTableBody.querySelectorAll('[data-percentage]');
         let calculatedTotalWeight = 0;
         weightCells.forEach(cell => {
             const percentage = parseFloat(cell.dataset.percentage);
-            const weight = (totalWeightGrams * percentage) / 100;
-            calculatedTotalWeight += weight;
-            cell.textContent = `${weight.toFixed(1).replace('.', ',')} g`;
+            if (!isNaN(percentage)) {
+                const weight = (totalWeightGrams * percentage) / 100;
+                calculatedTotalWeight += weight;
+                cell.textContent = `${weight.toFixed(1).replace('.', ',')} g`;
+            }
         });
         totalWeightDisplay.textContent = `${calculatedTotalWeight.toFixed(1).replace('.', ',')} g`;
     }
 
+    /**
+     * Gerencia a lógica dos inputs de cálculo, desabilitando campos conforme o uso.
+     */
     function handleInputLogic() {
         const totalWeightValue = parseFloat(totalWeightInput.value);
         const itemCountValue = parseFloat(itemCountInput.value);
@@ -81,13 +101,17 @@ document.addEventListener('DOMContentLoaded', () => {
         updateIngredientWeights(finalTotalWeightGrams);
     }
     
+    /**
+     * Função principal que inicializa a página.
+     */
     async function initializePage() {
         try {
             const urlParams = new URLSearchParams(window.location.search);
             const recipeKey = urlParams.get('recipe');
             if (!recipeKey) throw new Error("Nenhuma receita especificada na URL.");
 
-            const response = await fetch('receitas.json');
+            // CORREÇÃO: O caminho para o JSON foi ajustado.
+            const response = await fetch('./js/receitas.json');
             if (!response.ok) throw new Error('Não foi possível carregar o arquivo de receitas.');
             
             const allRecipes = await response.json();
@@ -100,10 +124,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Adiciona os event listeners aos inputs de cálculo
     [totalWeightInput, itemCountInput, itemWeightInput].forEach(input => {
         input.addEventListener('input', handleInputLogic);
     });
 
+    // Inicia a página e depois renderiza os ícones
     initializePage().then(() => {
         lucide.createIcons();
     });
