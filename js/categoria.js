@@ -1,7 +1,6 @@
 // Este script controla a funcionalidade da página de categorias (categoria.html)
 const API_ENDPOINT = 'https://apiconfeitaria.azurewebsites.net/api';
 document.addEventListener('DOMContentLoaded', () => {
-    // Elementos do DOM que serão manipulados
     const categoryNameEl = document.getElementById('category-name');
     const categoryDescriptionEl = document.getElementById('category-description');
     const recipesGridEl = document.getElementById('recipes-grid');
