@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     async function loadRecipes() {
         try {
             // CORREÇÃO: O caminho para o JSON foi ajustado para a estrutura de pastas correta.
-            const response = await fetch('./js/receitas.json');
+            const response = await fetch('https://apiconfeitaria.azurewebsites.net/index.html');
             if (!response.ok) {
                 throw new Error('Falha ao carregar o arquivo receitas.json');
             }

@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!recipeKey) throw new Error("Nenhuma receita especificada na URL.");
 
             // CORREÇÃO: O caminho para o JSON foi ajustado.
-            const response = await fetch('./js/receitas.json');
+            const response = await fetch('https://apiconfeitaria.azurewebsites.net/index.html');
             if (!response.ok) throw new Error('Não foi possível carregar o arquivo de receitas.');
             
             const allRecipes = await response.json();

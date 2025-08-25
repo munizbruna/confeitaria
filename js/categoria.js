@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
             categoryDescriptionEl.textContent = categoryDescriptions[decodedCategory] || categoryDescriptions['default'];
 
             // CORREÇÃO: O caminho para o JSON foi ajustado.
-            const response = await fetch('./js/receitas.json');
+            const response = await fetch('https://apiconfeitaria.azurewebsites.net/index.html');
             if (!response.ok) {
                 throw new Error('Falha ao carregar o arquivo de receitas.');
             }
