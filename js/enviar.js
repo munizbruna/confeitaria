@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Este é o endereço da sua API. A URL que você forneceu parece ser a da documentação.
     // Você provavelmente precisará alterar o final desta URL para o endpoint correto.
     // Ex: 'https://apiconfeitaria.azurewebsites.net/api/receitas'
-    const API_ENDPOINT = 'https://localhost:7077/api/';
+    const API_ENDPOINT = 'https://localhost:7077/api';
 
 
     // --- CARREGAR CATEGORIAS ---
@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 5. Enviar para a API
         try {
-            const response = await fetch(API_ENDPOINT, {
+            const response = await fetch(`${API_ENDPOINT}/Recipes`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
