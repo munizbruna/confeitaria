@@ -122,6 +122,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function populateCategories(lista) {
         categoriesGrid.innerHTML = '';
         const categories = new Set();
+        console.log("teste cat");
+        console.log(lista);
         for (const key in lista) {
             categories.add(lista[key].name);
         }
