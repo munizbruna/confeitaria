@@ -16,11 +16,15 @@ document.addEventListener('DOMContentLoaded', () => {
     async function loadRecipes() {
         try {
             // CORREÇÃO: O caminho para o JSON foi ajustado para a estrutura de pastas correta.
-            const response = await fetch('https://apiconfeitaria.azurewebsites.net/api/Recipes');
+            const response = await fetch('https://localhost:7077/api/Recipes');
+            console.log("===========teste RECEITAS");
+                
             if (!response.ok) {
                 throw new Error('Falha ao carregar a API');
             }
             const recipes = await response.json();
+            console.log("===========teste receitassss");
+            console.log(recipes);
 
             // Popula os diferentes componentes da página com os dados das receitas
             populateDropdown(recipes);
@@ -34,12 +38,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     async function loadCategories() {
         try {
+            console.log("===========INICIO teste categorias");
             // CORREÇÃO: O caminho para o JSON foi ajustado para a estrutura de pastas correta.
-            const response = await fetch('https://apiconfeitaria.azurewebsites.net/api/Categories');
+            const response = await fetch('https://localhost:7077/api/Categories');
             if (!response.ok) {
                 throw new Error('Falha ao carregar a API');
             }
             const categories = await response.json();
+            console.log("===========LISTA categorias");
+            console.log(categories);
 
             // Popula os diferentes componentes da página com os dados das receitas
             
@@ -58,10 +65,11 @@ document.addEventListener('DOMContentLoaded', () => {
      * @param {object} recipes - O objeto contendo todas as receitas.
      */
     function populateDropdown(recipes) {
+
         for (const key in recipes) {
             const recipe = recipes[key];
             const option = document.createElement('option');
-            option.value = key;
+            option.value = recipe.id;
             option.textContent = recipe.name;
             dropdown.appendChild(option);
         }
@@ -80,6 +88,8 @@ document.addEventListener('DOMContentLoaded', () => {
      * @param {object} recipes - O objeto contendo todas as receitas.
      */
     function populatePopularRecipes(recipes) {
+
+        console.log("teste receitassss");
         popularGrid.innerHTML = ''; 
         const recipeKeys = Object.keys(recipes);
 
@@ -99,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
         popularKeys.forEach(key => {
             const recipe = recipes[key];
             const card = document.createElement('a');
-            card.href = `${RECIPE_PAGE_URL}?recipe=${key}`;
+            card.href = `${RECIPE_PAGE_URL}?recipe=${recipe.id}`;
             card.className = "block bg-[var(--color-accent)]/30 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300";
             
             card.innerHTML = `
@@ -113,6 +123,8 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
             popularGrid.appendChild(card);
         });
+
+        console.log("===========teste receitassss FINAALL");
     }
 
     /**
@@ -122,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function populateCategories(lista) {
         categoriesGrid.innerHTML = '';
         const categories = new Set();
-        console.log("teste cat");
+        console.log("teste catereeeeeeeeee");
         console.log(lista);
         for (const key in lista) {
             categories.add(lista[key].name);
@@ -167,7 +179,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Inicia o carregamento das receitas e depois renderiza os ícones.
-    loadRecipes() || loadCategories().then(() => {
-        lucide.createIcons();
-    });
+    loadRecipes();
+    loadCategories().then(() => {
+         lucide.createIcons();
+        });
+    // loadRecipes() || loadCategories().then(() => {
+        // lucide.createIcons();
+    // });
 });

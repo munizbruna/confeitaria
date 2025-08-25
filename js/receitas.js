@@ -22,6 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        console.log("===========RECEITA SELECIONADA");
+        console.log(recipeData);
+
         recipeNameH1.textContent = recipeData.name;
         document.title = `Receita de ${recipeData.name} - Confeitaria Criativa`;
         
@@ -52,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         methodList.innerHTML = '';
         recipeData.method.forEach(step => {
             const li = document.createElement('li');
-            li.textContent = step;
+            li.textContent = step.step;
             methodList.appendChild(li);
         });
     }
@@ -108,15 +111,21 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             const urlParams = new URLSearchParams(window.location.search);
             const recipeKey = urlParams.get('recipe');
+            console.log("===========RECEITA NA URL");
+            console.log(recipeKey);
             if (!recipeKey) throw new Error("Nenhuma receita especificada na URL.");
 
             // CORREÇÃO: O caminho para o JSON foi ajustado.
-            const response = await fetch('https://apiconfeitaria.azurewebsites.net/api/Recipes');
+            const response = await fetch(`https://localhost:7077/api/Recipes/${recipeKey}`);
             if (!response.ok) throw new Error('Não foi possível carregar o arquivo de receitas.');
             console.log(response);
             
-            const allRecipes = await response.json();
-            const currentRecipe = allRecipes[recipeKey];
+            const currentRecipe = await response.json();
+
+            console.log("===========RECEITAAAAAAAAAAAAS");
+            console.log(currentRecipe);
+
+            //const currentRecipe = allRecipes[recipeKey];
             populateRecipeData(currentRecipe);
 
         } catch (error) {

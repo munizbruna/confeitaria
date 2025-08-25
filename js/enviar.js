@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Este é o endereço da sua API. A URL que você forneceu parece ser a da documentação.
     // Você provavelmente precisará alterar o final desta URL para o endpoint correto.
     // Ex: 'https://apiconfeitaria.azurewebsites.net/api/receitas'
-    const API_ENDPOINT = 'https://apiconfeitaria.azurewebsites.net/api/Recipes';
+    const API_ENDPOINT = 'https://localhost:7077/api/';
 
 
     // --- CARREGAR CATEGORIAS ---
@@ -27,20 +27,28 @@ document.addEventListener('DOMContentLoaded', () => {
      */
     async function loadCategories() {
         try {
-            const response = await fetch('./js/receitas.json');
+            const response = await fetch(`${API_ENDPOINT}/Categories`);
             if (!response.ok) {
                 throw new Error('Falha ao carregar o arquivo de receitas para popular as categorias.');
             }
             const recipes = await response.json();
+
             const categories = new Set();
             for (const key in recipes) {
-                categories.add(recipes[key].category);
+                categories.add(
+                    {
+                        id: recipes[key].id,
+                        name: recipes[key].name
+                    }
+                );
             }
             const sortedCategories = Array.from(categories).sort();
+
+
             sortedCategories.forEach(category => {
                 const option = document.createElement('option');
-                option.value = category;
-                option.textContent = category;
+                option.value = category.id;
+                option.textContent = category.name;
                 recipeCategorySelect.appendChild(option);
             });
         } catch (error) {
@@ -92,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
      */
     async function handleFormSubmit(event) {
         event.preventDefault(); // Impede o recarregamento da página
-        submitButton.disabled = true;
+        //submitButton.disabled = true;
         submitButton.textContent = 'Enviando...';
         resultArea.classList.remove('hidden');
         jsonOutput.value = '';
@@ -120,23 +128,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 3. Coletar modo de preparo
         const method = [];
+        let order = 0;
         const methodStepTextareas = document.querySelectorAll('.method-step');
         methodStepTextareas.forEach(textarea => {
             const step = textarea.value.trim();
             if (step) {
-                method.push(step);
+                method.push({
+                    step: step,
+                    order: order++
+                });
             }
         });
 
         // 4. Montar o objeto da receita para enviar à API
         const recipePayload = {
             name: recipeName,
-            category: recipeCategory,
+            categoryId: recipeCategory,
             image: recipeImage,
+            icon: 'recipeIcon',
             description: recipeDescription,
             ingredients: ingredients,
             method: method
         };
+
 
         // 5. Enviar para a API
         try {
