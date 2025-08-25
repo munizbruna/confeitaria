@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Este é o endereço da sua API. A URL que você forneceu parece ser a da documentação.
     // Você provavelmente precisará alterar o final desta URL para o endpoint correto.
     // Ex: 'https://apiconfeitaria.azurewebsites.net/api/receitas'
-    const API_ENDPOINT = 'https://localhost:7077/api';
+    const API_ENDPOINT = 'https://apiconfeitaria.azurewebsites.net/api';
 
 
     // --- CARREGAR CATEGORIAS ---

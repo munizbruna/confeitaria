@@ -1,5 +1,5 @@
 // Este script controla a funcionalidade da página de categorias (categoria.html)
-
+const API_ENDPOINT = 'https://apiconfeitaria.azurewebsites.net/api';
 document.addEventListener('DOMContentLoaded', () => {
     // Elementos do DOM que serão manipulados
     const categoryNameEl = document.getElementById('category-name');
@@ -41,22 +41,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Decodifica o nome da categoria para lidar com caracteres como '%20' para espaços
             const decodedCategory = decodeURIComponent(category);
-            console.log("===========CATEGORIA SELECIONADA");
-            console.log(decodedCategory);
 
             document.title = `${decodedCategory} - Confeitaria Criativa`;
             categoryNameEl.textContent = decodedCategory;
             categoryDescriptionEl.textContent = categoryDescriptions[decodedCategory] || categoryDescriptions['default'];
 
             // CORREÇÃO: O caminho para o JSON foi ajustado.
-            const response = await fetch(`https://localhost:7077/api/Recipes/bycategory/${decodedCategory}`);
+            const response = await fetch(`${API_ENDPOINT}/Recipes/bycategory/${decodedCategory}`);
 
             if (!response.ok) {
                 throw new Error('Falha ao carregar o arquivo de receitas.');
             }
             const allRecipes = await response.json();
-            console.log("===========teste RECEITAS POR CATEGOIRA");
-            console.log(allRecipes);
 
             // Filtra as receitas para mostrar apenas as da categoria selecionada
             const filteredRecipes = Object.entries(allRecipes);
@@ -80,9 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
             recipesGridEl.innerHTML = '<p class="text-center col-span-full">Nenhuma receita encontrada nesta categoria.</p>';
             return;
         }
-
-        console.log("===========teste RECEITAS FILTRADAS");
-        console.log(recipes);
 
         recipes.forEach(([id, recipe]) => {
             const card = document.createElement('a');
