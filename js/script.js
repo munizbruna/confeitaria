@@ -18,14 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
             // CORREÇÃO: O caminho para o JSON foi ajustado para a estrutura de pastas correta.
             const response = await fetch('https://apiconfeitaria.azurewebsites.net/api/Recipes');
             if (!response.ok) {
-                throw new Error('Falha ao carregar o arquivo receitas.json');
+                throw new Error('Falha ao carregar a API');
             }
             const recipes = await response.json();
 
             // Popula os diferentes componentes da página com os dados das receitas
             populateDropdown(recipes);
             populatePopularRecipes(recipes);
-            populateCategories(recipes);
 
         } catch (error) {
             console.error('Erro ao carregar receitas:', error);
@@ -33,6 +32,26 @@ document.addEventListener('DOMContentLoaded', () => {
             categoriesGrid.innerHTML = '<p class="text-center col-span-full text-red-400">Não foi possível carregar as categorias.</p>';
         }
     }
+    async function loadCategories() {
+        try {
+            // CORREÇÃO: O caminho para o JSON foi ajustado para a estrutura de pastas correta.
+            const response = await fetch('https://apiconfeitaria.azurewebsites.net/api/Categories');
+            if (!response.ok) {
+                throw new Error('Falha ao carregar a API');
+            }
+            const categories = await response.json();
+
+            // Popula os diferentes componentes da página com os dados das receitas
+            
+            populateCategories(categories);
+
+        } catch (error) {
+            console.error('Erro ao carregar receitas:', error);
+            popularGrid.innerHTML = '<p class="text-center col-span-full text-red-400">Não foi possível carregar as receitas.</p>';
+            categoriesGrid.innerHTML = '<p class="text-center col-span-full text-red-400">Não foi possível carregar as categorias.</p>';
+        }
+    }
+    
 
     /**
      * Popula o menu dropdown com todas as receitas.
@@ -100,11 +119,11 @@ document.addEventListener('DOMContentLoaded', () => {
      * Extrai todas as categorias únicas das receitas e as exibe na seção "Categorias".
      * @param {object} recipes - O objeto contendo todas as receitas.
      */
-    function populateCategories(recipes) {
+    function populateCategories(lista) {
         categoriesGrid.innerHTML = '';
         const categories = new Set();
-        for (const key in recipes) {
-            categories.add(recipes[key].category);
+        for (const key in lista) {
+            categories.add(lista[key].name);
         }
 
         if (categories.size === 0) {
@@ -146,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Inicia o carregamento das receitas e depois renderiza os ícones.
-    loadRecipes().then(() => {
+    loadRecipes() || loadCategories().then(() => {
         lucide.createIcons();
     });
 });
