@@ -113,6 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // CORREÇÃO: O caminho para o JSON foi ajustado.
             const response = await fetch('https://apiconfeitaria.azurewebsites.net/api/Recipes');
             if (!response.ok) throw new Error('Não foi possível carregar o arquivo de receitas.');
+            console.log(response);
             
             const allRecipes = await response.json();
             const currentRecipe = allRecipes[recipeKey];
