@@ -1,4 +1,5 @@
 // Este script controla a funcionalidade da página inicial (index.html)
+const API_ENDPOINT = 'https://apiconfeitaria.azurewebsites.net/api';
 
 document.addEventListener('DOMContentLoaded', () => {
     // Constantes para as URLs das outras páginas, facilitando a manutenção
@@ -16,15 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
     async function loadRecipes() {
         try {
             // CORREÇÃO: O caminho para o JSON foi ajustado para a estrutura de pastas correta.
-            const response = await fetch('https://localhost:7077/api/Recipes');
-            console.log("===========teste RECEITAS");
+            const response = await fetch(`${API_ENDPOINT}/Recipes`);
                 
             if (!response.ok) {
                 throw new Error('Falha ao carregar a API');
             }
             const recipes = await response.json();
-            console.log("===========teste receitassss");
-            console.log(recipes);
 
             // Popula os diferentes componentes da página com os dados das receitas
             populateDropdown(recipes);
@@ -38,15 +36,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     async function loadCategories() {
         try {
-            console.log("===========INICIO teste categorias");
             // CORREÇÃO: O caminho para o JSON foi ajustado para a estrutura de pastas correta.
-            const response = await fetch('https://localhost:7077/api/Categories');
+            const response = await fetch(`${API_ENDPOINT}/Categories`);
             if (!response.ok) {
                 throw new Error('Falha ao carregar a API');
             }
             const categories = await response.json();
-            console.log("===========LISTA categorias");
-            console.log(categories);
 
             // Popula os diferentes componentes da página com os dados das receitas
             
@@ -89,7 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
      */
     function populatePopularRecipes(recipes) {
 
-        console.log("teste receitassss");
         popularGrid.innerHTML = ''; 
         const recipeKeys = Object.keys(recipes);
 
@@ -124,7 +118,6 @@ document.addEventListener('DOMContentLoaded', () => {
             popularGrid.appendChild(card);
         });
 
-        console.log("===========teste receitassss FINAALL");
     }
 
     /**
@@ -134,8 +127,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function populateCategories(lista) {
         categoriesGrid.innerHTML = '';
         const categories = new Set();
-        console.log("teste catereeeeeeeeee");
-        console.log(lista);
         for (const key in lista) {
             categories.add(lista[key].name);
         }

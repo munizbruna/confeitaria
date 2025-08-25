@@ -1,5 +1,5 @@
 // Este script controla a funcionalidade da página de visualização de uma receita (receita.html)
-
+const API_ENDPOINT = 'https://apiconfeitaria.azurewebsites.net/api';
 document.addEventListener('DOMContentLoaded', () => {
     // Elementos do DOM para cálculo e exibição da receita
     const totalWeightInput = document.getElementById('total-weight');
@@ -22,8 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        console.log("===========RECEITA SELECIONADA");
-        console.log(recipeData);
 
         recipeNameH1.textContent = recipeData.name;
         document.title = `Receita de ${recipeData.name} - Confeitaria Criativa`;
@@ -111,19 +109,14 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             const urlParams = new URLSearchParams(window.location.search);
             const recipeKey = urlParams.get('recipe');
-            console.log("===========RECEITA NA URL");
-            console.log(recipeKey);
             if (!recipeKey) throw new Error("Nenhuma receita especificada na URL.");
 
             // CORREÇÃO: O caminho para o JSON foi ajustado.
-            const response = await fetch(`https://localhost:7077/api/Recipes/${recipeKey}`);
+            const response = await fetch(`${API_ENDPOINT}/Recipes/${recipeKey}`);
             if (!response.ok) throw new Error('Não foi possível carregar o arquivo de receitas.');
             console.log(response);
             
             const currentRecipe = await response.json();
-
-            console.log("===========RECEITAAAAAAAAAAAAS");
-            console.log(currentRecipe);
 
             //const currentRecipe = allRecipes[recipeKey];
             populateRecipeData(currentRecipe);
