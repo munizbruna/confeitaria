@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Popula os diferentes componentes da página com os dados das receitas
             populateDropdown(recipes);
-            populatePopularRecipes(recipes);
+            //populatePopularRecipes(recipes);
 
         } catch (error) {
             console.error('Erro ao carregar receitas:', error);
@@ -86,6 +86,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         popularGrid.innerHTML = ''; 
         const recipeKeys = Object.keys(recipes);
+
+        console.log("===========teste RECEITAS");
+        console.log(recipeKeys);
 
         // Embaralha as chaves das receitas para pegar 4 aleatórias
         for (let i = recipeKeys.length - 1; i > 0; i--) {
