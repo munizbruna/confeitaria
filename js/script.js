@@ -1,4 +1,5 @@
 // Este script controla a funcionalidade da página inicial (index.html)
+const API_ENDPOINT = 'https://apiconfeitaria.azurewebsites.net/api';
 
 document.addEventListener('DOMContentLoaded', () => {
     // Constantes para as URLs das outras páginas, facilitando a manutenção
@@ -16,7 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
     async function loadRecipes() {
         try {
             // CORREÇÃO: O caminho para o JSON foi ajustado para a estrutura de pastas correta.
-            const response = await fetch('https://apiconfeitaria.azurewebsites.net/api/Recipes');
+            const response = await fetch(`${API_ENDPOINT}/Recipes`);
+                
             if (!response.ok) {
                 throw new Error('Falha ao carregar a API');
             }
@@ -24,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Popula os diferentes componentes da página com os dados das receitas
             populateDropdown(recipes);
-            populatePopularRecipes(recipes);
+            //populatePopularRecipes(recipes);
 
         } catch (error) {
             console.error('Erro ao carregar receitas:', error);
@@ -35,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     async function loadCategories() {
         try {
             // CORREÇÃO: O caminho para o JSON foi ajustado para a estrutura de pastas correta.
-            const response = await fetch('https://apiconfeitaria.azurewebsites.net/api/Categories');
+            const response = await fetch(`${API_ENDPOINT}/Categories`);
             if (!response.ok) {
                 throw new Error('Falha ao carregar a API');
             }
@@ -58,10 +60,11 @@ document.addEventListener('DOMContentLoaded', () => {
      * @param {object} recipes - O objeto contendo todas as receitas.
      */
     function populateDropdown(recipes) {
+
         for (const key in recipes) {
             const recipe = recipes[key];
             const option = document.createElement('option');
-            option.value = key;
+            option.value = recipe.id;
             option.textContent = recipe.name;
             dropdown.appendChild(option);
         }
@@ -80,8 +83,12 @@ document.addEventListener('DOMContentLoaded', () => {
      * @param {object} recipes - O objeto contendo todas as receitas.
      */
     function populatePopularRecipes(recipes) {
+
         popularGrid.innerHTML = ''; 
         const recipeKeys = Object.keys(recipes);
+
+        console.log("===========teste RECEITAS");
+        console.log(recipeKeys);
 
         // Embaralha as chaves das receitas para pegar 4 aleatórias
         for (let i = recipeKeys.length - 1; i > 0; i--) {
@@ -99,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
         popularKeys.forEach(key => {
             const recipe = recipes[key];
             const card = document.createElement('a');
-            card.href = `${RECIPE_PAGE_URL}?recipe=${key}`;
+            card.href = `${RECIPE_PAGE_URL}?recipe=${recipe.id}`;
             card.className = "block bg-[var(--color-accent)]/30 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300";
             
             card.innerHTML = `
@@ -113,6 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
             popularGrid.appendChild(card);
         });
+
     }
 
     /**
@@ -165,7 +173,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Inicia o carregamento das receitas e depois renderiza os ícones.
-    loadRecipes() || loadCategories().then(() => {
-        lucide.createIcons();
-    });
+    loadRecipes();
+    loadCategories().then(() => {
+         lucide.createIcons();
+        });
+    // loadRecipes() || loadCategories().then(() => {
+        // lucide.createIcons();
+    // });
 });

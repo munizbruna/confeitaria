@@ -1,7 +1,6 @@
 // Este script controla a funcionalidade da página de categorias (categoria.html)
-
+const API_ENDPOINT = 'https://apiconfeitaria.azurewebsites.net/api';
 document.addEventListener('DOMContentLoaded', () => {
-    // Elementos do DOM que serão manipulados
     const categoryNameEl = document.getElementById('category-name');
     const categoryDescriptionEl = document.getElementById('category-description');
     const recipesGridEl = document.getElementById('recipes-grid');
@@ -41,22 +40,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Decodifica o nome da categoria para lidar com caracteres como '%20' para espaços
             const decodedCategory = decodeURIComponent(category);
-            
+
             document.title = `${decodedCategory} - Confeitaria Criativa`;
             categoryNameEl.textContent = decodedCategory;
             categoryDescriptionEl.textContent = categoryDescriptions[decodedCategory] || categoryDescriptions['default'];
 
             // CORREÇÃO: O caminho para o JSON foi ajustado.
-            const response = await fetch('https://apiconfeitaria.azurewebsites.net/api/Recipes');
+            const response = await fetch(`${API_ENDPOINT}/Recipes/bycategory/${decodedCategory}`);
+
             if (!response.ok) {
                 throw new Error('Falha ao carregar o arquivo de receitas.');
             }
             const allRecipes = await response.json();
 
             // Filtra as receitas para mostrar apenas as da categoria selecionada
-            const filteredRecipes = Object.entries(allRecipes).filter(([key, recipe]) => {
-                return recipe.category === decodedCategory;
-            });
+            const filteredRecipes = Object.entries(allRecipes);
 
             renderRecipes(filteredRecipes);
 
@@ -78,9 +76,9 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        recipes.forEach(([key, recipe]) => {
+        recipes.forEach(([id, recipe]) => {
             const card = document.createElement('a');
-            card.href = `receita.html?recipe=${key}`;
+            card.href = `receita.html?recipe=${recipe.id}`;
             card.className = "block bg-[var(--color-accent)]/30 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300";
             
             // Usa a imagem da receita; se não houver, usa um placeholder.

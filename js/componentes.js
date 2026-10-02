@@ -27,7 +27,7 @@ const headerHTML = `
 // HTML do Rodapé
 const footerHTML = `
 <div class="container mx-auto px-6 py-8 text-center">
-    <p>&copy; 2024 Fouet de Casa. Todos os direitos reservados.</p>
+    <p>&copy; 2025 Fouet de Casa. Todos os direitos reservados.</p>
 </div>
 `;
 
