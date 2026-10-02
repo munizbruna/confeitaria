@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Studio Ghibli - A Viagem de Chihiro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* --- Estilos Globais e Reset --- */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(130deg, #628e75 0.66%, #1a4855 83.32%);
+        box-shadow: 26px 24px 90px 0 rgba(31, 26, 51, 0.13);
+        color: #e0e0e0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        padding: 0 5%;
+        overflow-x: hidden; /* Previne scroll horizontal */
+      }
+
+      /* --- Cabeçalho --- */
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 0;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .logo {
+        width: 100px;
+      }
+
+      .social-links ul {
+        list-style: none;
+        display: flex;
+        gap: 1.5rem;
+      }
+
+      .social-links a {
+        display: flex;
+        align-items: center;
+        transition: opacity 0.3s ease;
+      }
+
+      .social-links a:hover {
+        opacity: 0.8;
+      }
+
+      .social-links img {
+        width: 20px;
+        height: 20px;
+      }
+
+      /* --- Conteúdo Principal --- */
+      .main-content {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: 2rem;
+      }
+
+      .content-left,
+      .content-right {
+        flex: 1;
+      }
+
+      .content-left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .director-name {
+        font-size: 0.9rem;
+        font-weight: 500;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+        opacity: 0.8;
+      }
+
+      .movie-title {
+        font-size: 3.5rem;
+        font-weight: 700;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+        color: #ffffff;
+      }
+
+      .movie-description {
+        font-size: 1rem;
+        font-weight: 300;
+        line-height: 1.6;
+        max-width: 450px;
+        margin-bottom: 2rem;
+      }
+
+      .buttons-container {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .btn {
+        padding: 0; /* Padding será aplicado no conteúdo interno */
+        border: 1px solid transparent;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        background-color: transparent; /* Fundo é aplicado no botão para o skew funcionar */
+        transform: skewX(-20deg);
+      }
+
+      .btn-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        padding: 0.8rem 1.8rem;
+        transform: skewX(20deg);
+      }
+
+      .btn-content img {
+        width: 14px;
+        height: 14px;
+      }
+
+      .btn-primary {
+        background-color: #6a8a7a;
+        color: #ffffff;
+      }
+
+      .btn-primary:hover {
+        background-color: #7a9d8c;
+        transform: skewX(-20deg) translateY(-2px);
+      }
+
+      .btn-secondary {
+        border: 2px solid #6a8a7a;
+      }
+
+      .btn-secondary .btn-content {
+        color: #f9f9f9;
+      }
+
+      .btn-secondary:hover {
+        background-color: #6a8a7a;
+        transform: skewX(-20deg) translateY(-2px);
+      }
+
+      .btn-secondary:hover .btn-content {
+        color: #ffffff;
+      }
+
+      .content-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .character-image {
+        max-width: 100%;
+        width: 700px;
+        height: auto;
+        filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.4));
+        animation: float 4s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-15px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+
+      @media (max-width: 900px) {
+        .main-content {
+          flex-direction: column;
+          text-align: center;
+          padding: 2rem 0;
+        }
+
+        .content-left {
+          align-items: center;
+          order: 2;
+        }
+
+        .content-right {
+          order: 1;
+          margin-bottom: 2rem;
+        }
+
+        .character-image {
+          width: 100%;
+          max-width: 450px;
+        }
+
+        .movie-title {
+          font-size: 2.8rem;
+        }
+
+        .movie-description {
+          max-width: 100%;
+        }
+
+        .buttons-container {
+          justify-content: center;
+        }
+      }
+
+      @media (max-width: 580px) {
+        body {
+          padding: 0 3%;
+        }
+
+        .header {
+          padding: 1.5rem 0;
+        }
+
+        .logo {
+          width: 80px;
+        }
+
+        .social-links ul {
+          gap: 1rem;
+        }
+
+        .movie-title {
+          font-size: 2.2rem;
+        }
+
+        .buttons-container {
+          flex-direction: column;
+          width: 100%;
+        }
+        .main-content {
+          gap: 0px;
+        }
+        .btn {
+          width: 100%;
+        }
+        .btn-secondary {
+          display: none;
+        }
+        .content-left {
+          text-align: left;
+          align-items: start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#">
+        <img
+          src="Propriedade 1=logo.png"
+          alt="Logo Studio Ghibli"
+          class="logo"
+        />
+      </a>
+      <nav class="social-links">
+        <ul>
+          <li>
+            <a href="#" aria-label="Facebook"
+              ><img src="Propriedade 1=facebook.png" alt="Facebook"
+            /></a>
+          </li>
+          <li>
+            <a href="#" aria-label="Instagram"
+              ><img src="Propriedade 1=instagram.png" alt="Instagram"
+            /></a>
+          </li>
+          <li>
+            <a href="#" aria-label="Twitter"
+              ><img src="Propriedade 1=twitter.png" alt="Twitter"
+            /></a>
+          </li>
+          <li>
+            <a href="#" aria-label="Youtube"
+              ><img src="Propriedade 1=youtube.png" alt="Youtube"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <div class="content-left">
+        <p class="director-name">Hayao Miyazaki</p>
+        <h1 class="movie-title">A VIAGEM DE CHIHIRO</h1>
+        <p class="movie-description">
+          Chihiro chega a um mundo mágico dominado por uma bruxa. Aqueles que a
+          desobedecem são transformados em animais.
+        </p>
+        <div class="buttons-container">
+          <button class="btn btn-primary">
+            <div class="btn-content">
+              <img src="Propriedade 1=play.png" alt="Play Icon" />
+              <span>ASSISTIR AGORA</span>
+            </div>
+          </button>
+          <button class="btn btn-secondary">
+            <div class="btn-content">
+              <span>ASSISTA O TRAILER</span>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <div class="content-right">
+        <img
+          src="image.png"
+          alt="Personagem Kaonashi (Sem Rosto) do filme A Viagem de Chihiro"
+          class="character-image"
+        />
+      </div>
+    </main>
+  </body>
+</html>
